@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.general_registry_api import GeneralRegistryApi  # noqa: E501
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api.general_registry_api import GeneralRegistryApi  # noqa: E501
 
 
 class TestGeneralRegistryApi(unittest.TestCase):

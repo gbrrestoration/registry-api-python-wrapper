@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.person_api import PersonApi  # noqa: E501
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api.person_api import PersonApi  # noqa: E501
 
 
 class TestPersonApi(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.url_dataset_resource import URLDatasetResource
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.url_dataset_resource import URLDatasetResource
 
 
 class TestURLDatasetResource(unittest.TestCase):

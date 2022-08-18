@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.model_run_workflow_definition_domain_info import ModelRunWorkflowDefinitionDomainInfo
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.model_run_workflow_definition_domain_info import ModelRunWorkflowDefinitionDomainInfo
 
 
 class TestModelRunWorkflowDefinitionDomainInfo(unittest.TestCase):

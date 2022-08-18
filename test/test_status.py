@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.status import Status
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.status import Status
 
 
 class TestStatus(unittest.TestCase):

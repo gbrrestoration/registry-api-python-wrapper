@@ -1,4 +1,4 @@
-# openapi_client.GeneralRegistryApi
+# rrap_mds_is_registry_api.GeneralRegistryApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,14 +19,14 @@ Fetch Item
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import general_registry_api
-from openapi_client.model.untyped_fetch_response import UntypedFetchResponse
-from openapi_client.model.http_validation_error import HTTPValidationError
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import general_registry_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.untyped_fetch_response import UntypedFetchResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -36,13 +36,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = general_registry_api.GeneralRegistryApi(api_client)
     id = "id_example" # str | 
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Fetch Item
         api_response = api_instance.fetch(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling GeneralRegistryApi->fetch: %s\n" % e)
 ```
 
@@ -99,15 +99,15 @@ list_items Lists all items in the registry based on the provided query filter. T
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import general_registry_api
-from openapi_client.model.unparsed_list_response import UnparsedListResponse
-from openapi_client.model.query_filter import QueryFilter
-from openapi_client.model.http_validation_error import HTTPValidationError
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import general_registry_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.query_filter import QueryFilter
+from rrap_mds_is_registry_api.model.unparsed_list_response import UnparsedListResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -117,13 +117,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = general_registry_api.GeneralRegistryApi(api_client)
     query_filter = QueryFilter(
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Items
         api_response = api_instance.list(query_filter)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling GeneralRegistryApi->list: %s\n" % e)
 ```
 

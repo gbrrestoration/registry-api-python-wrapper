@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.dataset_structural_template import DatasetStructuralTemplate
-from openapi_client.model.dataset_temporal_information import DatasetTemporalInformation
-from openapi_client.model.dataset_usage_information import DatasetUsageInformation
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
+from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
+from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
 globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
 globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
 globals()['DatasetUsageInformation'] = DatasetUsageInformation
-from openapi_client.model.dataset_template_domain_info import DatasetTemplateDomainInfo
+from rrap_mds_is_registry_api.model.dataset_template_domain_info import DatasetTemplateDomainInfo
 
 
 class TestDatasetTemplateDomainInfo(unittest.TestCase):

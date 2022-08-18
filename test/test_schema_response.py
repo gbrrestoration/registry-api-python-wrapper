@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.schema_response import SchemaResponse
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.schema_response import SchemaResponse
 
 
 class TestSchemaResponse(unittest.TestCase):

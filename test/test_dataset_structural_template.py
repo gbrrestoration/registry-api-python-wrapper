@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.file_information import FileInformation
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.file_information import FileInformation
 globals()['FileInformation'] = FileInformation
-from openapi_client.model.dataset_structural_template import DatasetStructuralTemplate
+from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
 
 
 class TestDatasetStructuralTemplate(unittest.TestCase):

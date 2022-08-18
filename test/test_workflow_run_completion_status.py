@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.workflow_run_completion_status import WorkflowRunCompletionStatus
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.workflow_run_completion_status import WorkflowRunCompletionStatus
 
 
 class TestWorkflowRunCompletionStatus(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item3 import Item3
-from openapi_client.model.status import Status
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item3 import Item3
+from rrap_mds_is_registry_api.model.status import Status
 globals()['Item3'] = Item3
 globals()['Status'] = Status
-from openapi_client.model.model_run_workflow_definition_fetch_response import ModelRunWorkflowDefinitionFetchResponse
+from rrap_mds_is_registry_api.model.model_run_workflow_definition_fetch_response import ModelRunWorkflowDefinitionFetchResponse
 
 
 class TestModelRunWorkflowDefinitionFetchResponse(unittest.TestCase):

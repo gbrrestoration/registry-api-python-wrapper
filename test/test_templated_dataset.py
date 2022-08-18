@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.dataset import Dataset
-from openapi_client.model.dataset_type import DatasetType
-from openapi_client.model.template_resource import TemplateResource
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.dataset import Dataset
+from rrap_mds_is_registry_api.model.dataset_type import DatasetType
+from rrap_mds_is_registry_api.model.template_resource import TemplateResource
 globals()['Dataset'] = Dataset
 globals()['DatasetType'] = DatasetType
 globals()['TemplateResource'] = TemplateResource
-from openapi_client.model.templated_dataset import TemplatedDataset
+from rrap_mds_is_registry_api.model.templated_dataset import TemplatedDataset
 
 
 class TestTemplatedDataset(unittest.TestCase):

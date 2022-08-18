@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_organisation import ItemOrganisation
-from openapi_client.model.seeded_item import SeededItem
-from openapi_client.model.status import Status
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
+from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+from rrap_mds_is_registry_api.model.status import Status
 globals()['ItemOrganisation'] = ItemOrganisation
 globals()['SeededItem'] = SeededItem
 globals()['Status'] = Status
-from openapi_client.model.organisation_list_response import OrganisationListResponse
+from rrap_mds_is_registry_api.model.organisation_list_response import OrganisationListResponse
 
 
 class TestOrganisationListResponse(unittest.TestCase):

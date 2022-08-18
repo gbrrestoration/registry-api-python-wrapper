@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.dataset_usage_type import DatasetUsageType
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.dataset_usage_type import DatasetUsageType
 
 
 class TestDatasetUsageType(unittest.TestCase):

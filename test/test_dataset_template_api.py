@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.dataset_template_api import DatasetTemplateApi  # noqa: E501
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api.dataset_template_api import DatasetTemplateApi  # noqa: E501
 
 
 class TestDatasetTemplateApi(unittest.TestCase):

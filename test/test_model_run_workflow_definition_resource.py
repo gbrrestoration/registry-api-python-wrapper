@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.model_run_workflow_definition_resource import ModelRunWorkflowDefinitionResource
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.model_run_workflow_definition_resource import ModelRunWorkflowDefinitionResource
 
 
 class TestModelRunWorkflowDefinitionResource(unittest.TestCase):

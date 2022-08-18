@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item2 import Item2
-from openapi_client.model.status import Status
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item2 import Item2
+from rrap_mds_is_registry_api.model.status import Status
 globals()['Item2'] = Item2
 globals()['Status'] = Status
-from openapi_client.model.model_run_fetch_response import ModelRunFetchResponse
+from rrap_mds_is_registry_api.model.model_run_fetch_response import ModelRunFetchResponse
 
 
 class TestModelRunFetchResponse(unittest.TestCase):

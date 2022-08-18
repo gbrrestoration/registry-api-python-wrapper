@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_model_run import ItemModelRun
-from openapi_client.model.seeded_item import SeededItem
-from openapi_client.model.status import Status
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item_model_run import ItemModelRun
+from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+from rrap_mds_is_registry_api.model.status import Status
 globals()['ItemModelRun'] = ItemModelRun
 globals()['SeededItem'] = SeededItem
 globals()['Status'] = Status
-from openapi_client.model.model_run_list_response import ModelRunListResponse
+from rrap_mds_is_registry_api.model.model_run_list_response import ModelRunListResponse
 
 
 class TestModelRunListResponse(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.dataset_parameter import DatasetParameter
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.dataset_parameter import DatasetParameter
 
 
 class TestDatasetParameter(unittest.TestCase):

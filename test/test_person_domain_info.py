@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.person_domain_info import PersonDomainInfo
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.person_domain_info import PersonDomainInfo
 
 
 class TestPersonDomainInfo(unittest.TestCase):

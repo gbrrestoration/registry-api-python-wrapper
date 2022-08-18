@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.data_store_dataset_resource import DataStoreDatasetResource
-from openapi_client.model.file_system_resource import FileSystemResource
-from openapi_client.model.url_dataset_resource import URLDatasetResource
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.data_store_dataset_resource import DataStoreDatasetResource
+from rrap_mds_is_registry_api.model.file_system_resource import FileSystemResource
+from rrap_mds_is_registry_api.model.url_dataset_resource import URLDatasetResource
 globals()['DataStoreDatasetResource'] = DataStoreDatasetResource
 globals()['FileSystemResource'] = FileSystemResource
 globals()['URLDatasetResource'] = URLDatasetResource
-from openapi_client.model.dataset import Dataset
+from rrap_mds_is_registry_api.model.dataset import Dataset
 
 
 class TestDataset(unittest.TestCase):

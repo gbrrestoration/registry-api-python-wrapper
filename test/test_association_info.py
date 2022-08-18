@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.modeller_resource import ModellerResource
-from openapi_client.model.organisation_resource import OrganisationResource
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.modeller_resource import ModellerResource
+from rrap_mds_is_registry_api.model.organisation_resource import OrganisationResource
 globals()['ModellerResource'] = ModellerResource
 globals()['OrganisationResource'] = OrganisationResource
-from openapi_client.model.association_info import AssociationInfo
+from rrap_mds_is_registry_api.model.association_info import AssociationInfo
 
 
 class TestAssociationInfo(unittest.TestCase):

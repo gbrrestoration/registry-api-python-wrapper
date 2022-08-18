@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.location_inner import LocationInner
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.location_inner import LocationInner
 
 
 class TestLocationInner(unittest.TestCase):

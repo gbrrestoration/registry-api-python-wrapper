@@ -1,4 +1,4 @@
-# openapi_client.OrganisationApi
+# rrap_mds_is_registry_api.OrganisationApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,15 +28,15 @@ create_item POSTs a new item to the registry of the given item type.  The item d
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.http_validation_error import HTTPValidationError
-from openapi_client.model.organisation_domain_info import OrganisationDomainInfo
-from openapi_client.model.organisation_create_response import OrganisationCreateResponse
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.organisation_create_response import OrganisationCreateResponse
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.organisation_domain_info import OrganisationDomainInfo
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -46,13 +46,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
     organisation_domain_info = OrganisationDomainInfo(
@@ -66,7 +66,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create Item
         api_response = api_instance.create_agent_organisation(organisation_domain_info)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->create_agent_organisation: %s\n" % e)
 ```
 
@@ -113,14 +113,14 @@ delete_item Admin only endpoint which can be used to delete  objects from the re
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.status_response import StatusResponse
-from openapi_client.model.http_validation_error import HTTPValidationError
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.status_response import StatusResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -130,13 +130,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
     id = "id_example" # str | 
@@ -146,7 +146,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Delete Item
         api_response = api_instance.delete_agent_organisation(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->delete_agent_organisation: %s\n" % e)
 ```
 
@@ -193,14 +193,14 @@ fetch_item Fetches the item specified by the id from the  registry. Only returns
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.http_validation_error import HTTPValidationError
-from openapi_client.model.organisation_fetch_response import OrganisationFetchResponse
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.organisation_fetch_response import OrganisationFetchResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -210,13 +210,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
     id = "id_example" # str | 
@@ -227,7 +227,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Fetch Item
         api_response = api_instance.fetch_agent_organisation(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->fetch_agent_organisation: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -236,7 +236,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Fetch Item
         api_response = api_instance.fetch_agent_organisation(id, seed_allowed=seed_allowed)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->fetch_agent_organisation: %s\n" % e)
 ```
 
@@ -284,13 +284,13 @@ list_items Lists all items of the specified type (by route). Sorts items  into p
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.organisation_list_response import OrganisationListResponse
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.organisation_list_response import OrganisationListResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -300,13 +300,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
 
@@ -315,7 +315,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Items
         api_response = api_instance.list_agent_organisation()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->list_agent_organisation: %s\n" % e)
 ```
 
@@ -358,13 +358,13 @@ get_schema Returns the auto generated pydantic model  json schema. This can be u
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.schema_response import SchemaResponse
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.schema_response import SchemaResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -374,13 +374,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
 
@@ -389,7 +389,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Schema
         api_response = api_instance.schema_agent_organisation()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->schema_agent_organisation: %s\n" % e)
 ```
 
@@ -432,13 +432,13 @@ seed_item Posts a new empty item. This will mint a handle,  set the creation tim
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.organisation_seed_response import OrganisationSeedResponse
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.organisation_seed_response import OrganisationSeedResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -448,13 +448,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
 
@@ -463,7 +463,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Seed Item
         api_response = api_instance.seed_agent_organisation()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->seed_agent_organisation: %s\n" % e)
 ```
 
@@ -506,13 +506,13 @@ Returns the ui schema override provided for this model.  This is for use by the 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.ui_schema_response import UiSchemaResponse
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.ui_schema_response import UiSchemaResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -522,13 +522,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
 
@@ -537,7 +537,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Ui Schema
         api_response = api_instance.ui_schema_agent_organisation()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->ui_schema_agent_organisation: %s\n" % e)
 ```
 
@@ -580,15 +580,15 @@ update_item PUT method to apply an update to an existing item. The  existing ite
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.status_response import StatusResponse
-from openapi_client.model.http_validation_error import HTTPValidationError
-from openapi_client.model.organisation_domain_info import OrganisationDomainInfo
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.status_response import StatusResponse
+from rrap_mds_is_registry_api.model.organisation_domain_info import OrganisationDomainInfo
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -598,13 +598,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
     id = "id_example" # str | 
@@ -619,7 +619,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update Item
         api_response = api_instance.update_agent_organisation(id, organisation_domain_info)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->update_agent_organisation: %s\n" % e)
 ```
 
@@ -667,15 +667,15 @@ validate Validates the given item body input. If this method responds with a suc
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import organisation_api
-from openapi_client.model.status_response import StatusResponse
-from openapi_client.model.http_validation_error import HTTPValidationError
-from openapi_client.model.organisation_domain_info import OrganisationDomainInfo
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import organisation_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.status_response import StatusResponse
+from rrap_mds_is_registry_api.model.organisation_domain_info import OrganisationDomainInfo
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 
@@ -685,13 +685,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = openapi_client.Configuration(
+configuration = rrap_mds_is_registry_api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = organisation_api.OrganisationApi(api_client)
     organisation_domain_info = OrganisationDomainInfo(
@@ -705,7 +705,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Validate
         api_response = api_instance.validate_agent_organisation(organisation_domain_info)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling OrganisationApi->validate_agent_organisation: %s\n" % e)
 ```
 

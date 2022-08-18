@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_category import ItemCategory
-from openapi_client.model.item_sub_type import ItemSubType
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item_category import ItemCategory
+from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
 globals()['ItemCategory'] = ItemCategory
 globals()['ItemSubType'] = ItemSubType
-from openapi_client.model.item_model_run_workflow_definition import ItemModelRunWorkflowDefinition
+from rrap_mds_is_registry_api.model.item_model_run_workflow_definition import ItemModelRunWorkflowDefinition
 
 
 class TestItemModelRunWorkflowDefinition(unittest.TestCase):

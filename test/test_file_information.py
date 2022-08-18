@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.dataset_parameter import DatasetParameter
-from openapi_client.model.dataset_usage_information import DatasetUsageInformation
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.dataset_parameter import DatasetParameter
+from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
 globals()['DatasetParameter'] = DatasetParameter
 globals()['DatasetUsageInformation'] = DatasetUsageInformation
-from openapi_client.model.file_information import FileInformation
+from rrap_mds_is_registry_api.model.file_information import FileInformation
 
 
 class TestFileInformation(unittest.TestCase):

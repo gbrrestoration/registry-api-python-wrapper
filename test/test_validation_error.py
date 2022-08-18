@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.location_inner import LocationInner
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.location_inner import LocationInner
 globals()['LocationInner'] = LocationInner
-from openapi_client.model.validation_error import ValidationError
+from rrap_mds_is_registry_api.model.validation_error import ValidationError
 
 
 class TestValidationError(unittest.TestCase):

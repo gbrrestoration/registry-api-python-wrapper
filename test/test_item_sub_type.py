@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_sub_type import ItemSubType
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
 
 
 class TestItemSubType(unittest.TestCase):

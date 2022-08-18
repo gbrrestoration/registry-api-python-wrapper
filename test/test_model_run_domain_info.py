@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.model_run_record import ModelRunRecord
-from openapi_client.model.workflow_run_completion_status import WorkflowRunCompletionStatus
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.model_run_record import ModelRunRecord
+from rrap_mds_is_registry_api.model.workflow_run_completion_status import WorkflowRunCompletionStatus
 globals()['ModelRunRecord'] = ModelRunRecord
 globals()['WorkflowRunCompletionStatus'] = WorkflowRunCompletionStatus
-from openapi_client.model.model_run_domain_info import ModelRunDomainInfo
+from rrap_mds_is_registry_api.model.model_run_domain_info import ModelRunDomainInfo
 
 
 class TestModelRunDomainInfo(unittest.TestCase):

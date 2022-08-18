@@ -11,18 +11,18 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.dataset_structural_template import DatasetStructuralTemplate
-from openapi_client.model.dataset_temporal_information import DatasetTemporalInformation
-from openapi_client.model.dataset_usage_information import DatasetUsageInformation
-from openapi_client.model.item_category import ItemCategory
-from openapi_client.model.item_sub_type import ItemSubType
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
+from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
+from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
+from rrap_mds_is_registry_api.model.item_category import ItemCategory
+from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
 globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
 globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
 globals()['DatasetUsageInformation'] = DatasetUsageInformation
 globals()['ItemCategory'] = ItemCategory
 globals()['ItemSubType'] = ItemSubType
-from openapi_client.model.item_dataset_template import ItemDatasetTemplate
+from rrap_mds_is_registry_api.model.item_dataset_template import ItemDatasetTemplate
 
 
 class TestItemDatasetTemplate(unittest.TestCase):

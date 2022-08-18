@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.model_run_workflow_definition_api import ModelRunWorkflowDefinitionApi  # noqa: E501
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api.model_run_workflow_definition_api import ModelRunWorkflowDefinitionApi  # noqa: E501
 
 
 class TestModelRunWorkflowDefinitionApi(unittest.TestCase):

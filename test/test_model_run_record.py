@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.association_info import AssociationInfo
-from openapi_client.model.input_info import InputInfo
-from openapi_client.model.model_run_workflow_definition_resource import ModelRunWorkflowDefinitionResource
-from openapi_client.model.output_info import OutputInfo
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.association_info import AssociationInfo
+from rrap_mds_is_registry_api.model.input_info import InputInfo
+from rrap_mds_is_registry_api.model.model_run_workflow_definition_resource import ModelRunWorkflowDefinitionResource
+from rrap_mds_is_registry_api.model.output_info import OutputInfo
 globals()['AssociationInfo'] = AssociationInfo
 globals()['InputInfo'] = InputInfo
 globals()['ModelRunWorkflowDefinitionResource'] = ModelRunWorkflowDefinitionResource
 globals()['OutputInfo'] = OutputInfo
-from openapi_client.model.model_run_record import ModelRunRecord
+from rrap_mds_is_registry_api.model.model_run_record import ModelRunRecord
 
 
 class TestModelRunRecord(unittest.TestCase):

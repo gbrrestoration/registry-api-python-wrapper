@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.templated_dataset import TemplatedDataset
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.templated_dataset import TemplatedDataset
 globals()['TemplatedDataset'] = TemplatedDataset
-from openapi_client.model.output_info import OutputInfo
+from rrap_mds_is_registry_api.model.output_info import OutputInfo
 
 
 class TestOutputInfo(unittest.TestCase):

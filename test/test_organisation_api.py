@@ -10,8 +10,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.organisation_api import OrganisationApi  # noqa: E501
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api.organisation_api import OrganisationApi  # noqa: E501
 
 
 class TestOrganisationApi(unittest.TestCase):

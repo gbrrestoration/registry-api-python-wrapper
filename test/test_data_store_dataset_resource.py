@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.data_store_dataset_resource import DataStoreDatasetResource
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.data_store_dataset_resource import DataStoreDatasetResource
 
 
 class TestDataStoreDatasetResource(unittest.TestCase):

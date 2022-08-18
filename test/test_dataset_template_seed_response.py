@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.seeded_item import SeededItem
-from openapi_client.model.status import Status
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+from rrap_mds_is_registry_api.model.status import Status
 globals()['SeededItem'] = SeededItem
 globals()['Status'] = Status
-from openapi_client.model.dataset_template_seed_response import DatasetTemplateSeedResponse
+from rrap_mds_is_registry_api.model.dataset_template_seed_response import DatasetTemplateSeedResponse
 
 
 class TestDatasetTemplateSeedResponse(unittest.TestCase):

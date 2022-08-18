@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.modeller_resource import ModellerResource
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.modeller_resource import ModellerResource
 
 
 class TestModellerResource(unittest.TestCase):

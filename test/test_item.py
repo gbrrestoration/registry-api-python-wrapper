@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.dataset_structural_template import DatasetStructuralTemplate
-from openapi_client.model.dataset_temporal_information import DatasetTemporalInformation
-from openapi_client.model.dataset_usage_information import DatasetUsageInformation
-from openapi_client.model.item_category import ItemCategory
-from openapi_client.model.item_dataset_template import ItemDatasetTemplate
-from openapi_client.model.item_sub_type import ItemSubType
-from openapi_client.model.seeded_item import SeededItem
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
+from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
+from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
+from rrap_mds_is_registry_api.model.item_category import ItemCategory
+from rrap_mds_is_registry_api.model.item_dataset_template import ItemDatasetTemplate
+from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+from rrap_mds_is_registry_api.model.seeded_item import SeededItem
 globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
 globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
 globals()['DatasetUsageInformation'] = DatasetUsageInformation
@@ -26,7 +26,7 @@ globals()['ItemCategory'] = ItemCategory
 globals()['ItemDatasetTemplate'] = ItemDatasetTemplate
 globals()['ItemSubType'] = ItemSubType
 globals()['SeededItem'] = SeededItem
-from openapi_client.model.item import Item
+from rrap_mds_is_registry_api.model.item import Item
 
 
 class TestItem(unittest.TestCase):

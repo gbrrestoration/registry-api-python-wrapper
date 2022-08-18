@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_category import ItemCategory
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item_category import ItemCategory
 
 
 class TestItemCategory(unittest.TestCase):

@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.item_category import ItemCategory
-from openapi_client.model.item_person import ItemPerson
-from openapi_client.model.item_sub_type import ItemSubType
-from openapi_client.model.seeded_item import SeededItem
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item_category import ItemCategory
+from rrap_mds_is_registry_api.model.item_person import ItemPerson
+from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+from rrap_mds_is_registry_api.model.seeded_item import SeededItem
 globals()['ItemCategory'] = ItemCategory
 globals()['ItemPerson'] = ItemPerson
 globals()['ItemSubType'] = ItemSubType
 globals()['SeededItem'] = SeededItem
-from openapi_client.model.item5 import Item5
+from rrap_mds_is_registry_api.model.item5 import Item5
 
 
 class TestItem5(unittest.TestCase):
