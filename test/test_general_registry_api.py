@@ -23,15 +23,15 @@ class TestGeneralRegistryApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_fetch_item_registry_general_fetch_get(self):
-        """Test case for fetch_item_registry_general_fetch_get
+    def test_fetch(self):
+        """Test case for fetch
 
         Fetch Item  # noqa: E501
         """
         pass
 
-    def test_list_items_registry_general_list_post(self):
-        """Test case for list_items_registry_general_list_post
+    def test_list(self):
+        """Test case for list
 
         List Items  # noqa: E501
         """

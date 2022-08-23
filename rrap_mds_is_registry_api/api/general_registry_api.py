@@ -38,14 +38,14 @@ class GeneralRegistryApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
-        self.fetch_item_registry_general_fetch_get_endpoint = _Endpoint(
+        self.fetch_endpoint = _Endpoint(
             settings={
                 'response_type': (UntypedFetchResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/general/fetch',
-                'operation_id': 'fetch_item_registry_general_fetch_get',
+                'operation_id': 'fetch',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -89,14 +89,14 @@ class GeneralRegistryApi(object):
             },
             api_client=api_client
         )
-        self.list_items_registry_general_list_post_endpoint = _Endpoint(
+        self.list_endpoint = _Endpoint(
             settings={
                 'response_type': (UnparsedListResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/general/list',
-                'operation_id': 'list_items_registry_general_list_post',
+                'operation_id': 'list',
                 'http_method': 'POST',
                 'servers': None,
             },
@@ -142,7 +142,7 @@ class GeneralRegistryApi(object):
             api_client=api_client
         )
 
-    def fetch_item_registry_general_fetch_get(
+    def fetch(
         self,
         id,
         **kwargs
@@ -152,7 +152,7 @@ class GeneralRegistryApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.fetch_item_registry_general_fetch_get(id, async_req=True)
+        >>> thread = api.fetch(id, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -222,9 +222,9 @@ class GeneralRegistryApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['id'] = \
             id
-        return self.fetch_item_registry_general_fetch_get_endpoint.call_with_http_info(**kwargs)
+        return self.fetch_endpoint.call_with_http_info(**kwargs)
 
-    def list_items_registry_general_list_post(
+    def list(
         self,
         query_filter,
         **kwargs
@@ -235,7 +235,7 @@ class GeneralRegistryApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.list_items_registry_general_list_post(query_filter, async_req=True)
+        >>> thread = api.list(query_filter, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -305,5 +305,5 @@ class GeneralRegistryApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['query_filter'] = \
             query_filter
-        return self.list_items_registry_general_list_post_endpoint.call_with_http_info(**kwargs)
+        return self.list_endpoint.call_with_http_info(**kwargs)
 
