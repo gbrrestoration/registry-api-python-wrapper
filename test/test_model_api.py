@@ -23,64 +23,64 @@ class TestModelApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_entity_model(self):
-        """Test case for create_entity_model
+    def test_create_item_registry_entity_model_create_post(self):
+        """Test case for create_item_registry_entity_model_create_post
 
         Create Item  # noqa: E501
         """
         pass
 
-    def test_delete_entity_model(self):
-        """Test case for delete_entity_model
+    def test_delete_item_registry_entity_model_delete_delete(self):
+        """Test case for delete_item_registry_entity_model_delete_delete
 
         Delete Item  # noqa: E501
         """
         pass
 
-    def test_fetch_entity_model(self):
-        """Test case for fetch_entity_model
+    def test_fetch_item_registry_entity_model_fetch_get(self):
+        """Test case for fetch_item_registry_entity_model_fetch_get
 
         Fetch Item  # noqa: E501
         """
         pass
 
-    def test_list_entity_model(self):
-        """Test case for list_entity_model
-
-        List Items  # noqa: E501
-        """
-        pass
-
-    def test_schema_entity_model(self):
-        """Test case for schema_entity_model
+    def test_get_schema_registry_entity_model_schema_get(self):
+        """Test case for get_schema_registry_entity_model_schema_get
 
         Get Schema  # noqa: E501
         """
         pass
 
-    def test_seed_entity_model(self):
-        """Test case for seed_entity_model
-
-        Seed Item  # noqa: E501
-        """
-        pass
-
-    def test_ui_schema_entity_model(self):
-        """Test case for ui_schema_entity_model
+    def test_get_ui_schema_registry_entity_model_ui_schema_get(self):
+        """Test case for get_ui_schema_registry_entity_model_ui_schema_get
 
         Get Ui Schema  # noqa: E501
         """
         pass
 
-    def test_update_entity_model(self):
-        """Test case for update_entity_model
+    def test_list_items_registry_entity_model_list_get(self):
+        """Test case for list_items_registry_entity_model_list_get
+
+        List Items  # noqa: E501
+        """
+        pass
+
+    def test_seed_item_registry_entity_model_seed_post(self):
+        """Test case for seed_item_registry_entity_model_seed_post
+
+        Seed Item  # noqa: E501
+        """
+        pass
+
+    def test_update_item_registry_entity_model_update_put(self):
+        """Test case for update_item_registry_entity_model_update_put
 
         Update Item  # noqa: E501
         """
         pass
 
-    def test_validate_entity_model(self):
-        """Test case for validate_entity_model
+    def test_validate_registry_entity_model_validate_post(self):
+        """Test case for validate_registry_entity_model_validate_post
 
         Validate  # noqa: E501
         """

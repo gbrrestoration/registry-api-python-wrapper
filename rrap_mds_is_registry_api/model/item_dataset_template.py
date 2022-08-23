@@ -33,13 +33,9 @@ def lazy_import():
     from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
     from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
     from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
-    from rrap_mds_is_registry_api.model.item_category import ItemCategory
-    from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
     globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
     globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
     globals()['DatasetUsageInformation'] = DatasetUsageInformation
-    globals()['ItemCategory'] = ItemCategory
-    globals()['ItemSubType'] = ItemSubType
 
 
 class ItemDatasetTemplate(ModelNormal):

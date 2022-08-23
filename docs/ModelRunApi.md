@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_activity_model_run**](ModelRunApi.md#create_activity_model_run) | **POST** /registry/activity/model_run/create | Create Item
-[**delete_activity_model_run**](ModelRunApi.md#delete_activity_model_run) | **DELETE** /registry/activity/model_run/delete | Delete Item
-[**fetch_activity_model_run**](ModelRunApi.md#fetch_activity_model_run) | **GET** /registry/activity/model_run/fetch | Fetch Item
-[**list_activity_model_run**](ModelRunApi.md#list_activity_model_run) | **GET** /registry/activity/model_run/list | List Items
-[**schema_activity_model_run**](ModelRunApi.md#schema_activity_model_run) | **GET** /registry/activity/model_run/schema | Get Schema
-[**seed_activity_model_run**](ModelRunApi.md#seed_activity_model_run) | **POST** /registry/activity/model_run/seed | Seed Item
-[**ui_schema_activity_model_run**](ModelRunApi.md#ui_schema_activity_model_run) | **GET** /registry/activity/model_run/ui_schema | Get Ui Schema
-[**update_activity_model_run**](ModelRunApi.md#update_activity_model_run) | **PUT** /registry/activity/model_run/update | Update Item
-[**validate_activity_model_run**](ModelRunApi.md#validate_activity_model_run) | **POST** /registry/activity/model_run/validate | Validate
+[**create_item_registry_activity_model_run_create_post**](ModelRunApi.md#create_item_registry_activity_model_run_create_post) | **POST** /registry/activity/model_run/create | Create Item
+[**delete_item_registry_activity_model_run_delete_delete**](ModelRunApi.md#delete_item_registry_activity_model_run_delete_delete) | **DELETE** /registry/activity/model_run/delete | Delete Item
+[**fetch_item_registry_activity_model_run_fetch_get**](ModelRunApi.md#fetch_item_registry_activity_model_run_fetch_get) | **GET** /registry/activity/model_run/fetch | Fetch Item
+[**get_schema_registry_activity_model_run_schema_get**](ModelRunApi.md#get_schema_registry_activity_model_run_schema_get) | **GET** /registry/activity/model_run/schema | Get Schema
+[**get_ui_schema_registry_activity_model_run_ui_schema_get**](ModelRunApi.md#get_ui_schema_registry_activity_model_run_ui_schema_get) | **GET** /registry/activity/model_run/ui_schema | Get Ui Schema
+[**list_items_registry_activity_model_run_list_get**](ModelRunApi.md#list_items_registry_activity_model_run_list_get) | **GET** /registry/activity/model_run/list | List Items
+[**seed_item_registry_activity_model_run_seed_post**](ModelRunApi.md#seed_item_registry_activity_model_run_seed_post) | **POST** /registry/activity/model_run/seed | Seed Item
+[**update_item_registry_activity_model_run_update_put**](ModelRunApi.md#update_item_registry_activity_model_run_update_put) | **PUT** /registry/activity/model_run/update | Update Item
+[**validate_registry_activity_model_run_validate_post**](ModelRunApi.md#validate_registry_activity_model_run_validate_post) | **POST** /registry/activity/model_run/validate | Validate
 
 
-# **create_activity_model_run**
-> ModelRunCreateResponse create_activity_model_run(model_run_domain_info)
+# **create_item_registry_activity_model_run_create_post**
+> ModelRunCreateResponse create_item_registry_activity_model_run_create_post(model_run_domain_info)
 
 Create Item
 
@@ -101,10 +101,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Create Item
-        api_response = api_instance.create_activity_model_run(model_run_domain_info)
+        api_response = api_instance.create_item_registry_activity_model_run_create_post(model_run_domain_info)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->create_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->create_item_registry_activity_model_run_create_post: %s\n" % e)
 ```
 
 
@@ -137,8 +137,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_activity_model_run**
-> StatusResponse delete_activity_model_run(id)
+# **delete_item_registry_activity_model_run_delete_delete**
+> StatusResponse delete_item_registry_activity_model_run_delete_delete(id)
 
 Delete Item
 
@@ -181,10 +181,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Delete Item
-        api_response = api_instance.delete_activity_model_run(id)
+        api_response = api_instance.delete_item_registry_activity_model_run_delete_delete(id)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->delete_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->delete_item_registry_activity_model_run_delete_delete: %s\n" % e)
 ```
 
 
@@ -217,8 +217,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **fetch_activity_model_run**
-> ModelRunFetchResponse fetch_activity_model_run(id)
+# **fetch_item_registry_activity_model_run_fetch_get**
+> ModelRunFetchResponse fetch_item_registry_activity_model_run_fetch_get(id)
 
 Fetch Item
 
@@ -262,19 +262,19 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Fetch Item
-        api_response = api_instance.fetch_activity_model_run(id)
+        api_response = api_instance.fetch_item_registry_activity_model_run_fetch_get(id)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->fetch_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->fetch_item_registry_activity_model_run_fetch_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Fetch Item
-        api_response = api_instance.fetch_activity_model_run(id, seed_allowed=seed_allowed)
+        api_response = api_instance.fetch_item_registry_activity_model_run_fetch_get(id, seed_allowed=seed_allowed)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->fetch_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->fetch_item_registry_activity_model_run_fetch_get: %s\n" % e)
 ```
 
 
@@ -308,82 +308,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_activity_model_run**
-> ModelRunListResponse list_activity_model_run()
-
-List Items
-
-list_items Lists all items of the specified type (by route). Sorts items  into parsable complete entities (i.e. normal entities), parsable  seed items (i.e. incomplete), and completely unparsable entities.   If there are any unparsable entities, the success field of the return  status will be False, however the items will still be provided.   Arguments ----------  Returns -------  : GenericListResponse     The list of items, sorted complete, seed and unparsable, as well      as counts for each type.  See Also (optional) --------  Examples (optional) --------
-
-### Example
-
-* OAuth Authentication (OAuth2PasswordBearer):
-
-```python
-import time
-import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.api import model_run_api
-from rrap_mds_is_registry_api.model.model_run_list_response import ModelRunListResponse
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = model_run_api.ModelRunApi(api_client)
-
-    # example, this endpoint has no required or optional parameters
-    try:
-        # List Items
-        api_response = api_instance.list_activity_model_run()
-        pprint(api_response)
-    except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->list_activity_model_run: %s\n" % e)
-```
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ModelRunListResponse**](ModelRunListResponse.md)
-
-### Authorization
-
-[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **schema_activity_model_run**
-> SchemaResponse schema_activity_model_run()
+# **get_schema_registry_activity_model_run_schema_get**
+> SchemaResponse get_schema_registry_activity_model_run_schema_get()
 
 Get Schema
 
@@ -424,10 +350,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example, this endpoint has no required or optional parameters
     try:
         # Get Schema
-        api_response = api_instance.schema_activity_model_run()
+        api_response = api_instance.get_schema_registry_activity_model_run_schema_get()
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->schema_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->get_schema_registry_activity_model_run_schema_get: %s\n" % e)
 ```
 
 
@@ -456,82 +382,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **seed_activity_model_run**
-> ModelRunSeedResponse seed_activity_model_run()
-
-Seed Item
-
-seed_item Posts a new empty item. This will mint a handle,  set the creation time, and produce the correct  category and sub type. This can then be updated  later using the update endpoint.  Arguments ----------  Returns -------  : GenericSeedResponse     The seed item that was created.  See Also (optional) --------  Examples (optional) --------
-
-### Example
-
-* OAuth Authentication (OAuth2PasswordBearer):
-
-```python
-import time
-import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.api import model_run_api
-from rrap_mds_is_registry_api.model.model_run_seed_response import ModelRunSeedResponse
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = model_run_api.ModelRunApi(api_client)
-
-    # example, this endpoint has no required or optional parameters
-    try:
-        # Seed Item
-        api_response = api_instance.seed_activity_model_run()
-        pprint(api_response)
-    except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->seed_activity_model_run: %s\n" % e)
-```
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ModelRunSeedResponse**](ModelRunSeedResponse.md)
-
-### Authorization
-
-[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ui_schema_activity_model_run**
-> UiSchemaResponse ui_schema_activity_model_run()
+# **get_ui_schema_registry_activity_model_run_ui_schema_get**
+> UiSchemaResponse get_ui_schema_registry_activity_model_run_ui_schema_get()
 
 Get Ui Schema
 
@@ -572,10 +424,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example, this endpoint has no required or optional parameters
     try:
         # Get Ui Schema
-        api_response = api_instance.ui_schema_activity_model_run()
+        api_response = api_instance.get_ui_schema_registry_activity_model_run_ui_schema_get()
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->ui_schema_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->get_ui_schema_registry_activity_model_run_ui_schema_get: %s\n" % e)
 ```
 
 
@@ -604,8 +456,156 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_activity_model_run**
-> StatusResponse update_activity_model_run(id, model_run_domain_info)
+# **list_items_registry_activity_model_run_list_get**
+> ModelRunListResponse list_items_registry_activity_model_run_list_get()
+
+List Items
+
+list_items Lists all items of the specified type (by route). Sorts items  into parsable complete entities (i.e. normal entities), parsable  seed items (i.e. incomplete), and completely unparsable entities.   If there are any unparsable entities, the success field of the return  status will be False, however the items will still be provided.   Arguments ----------  Returns -------  : GenericListResponse     The list of items, sorted complete, seed and unparsable, as well      as counts for each type.  See Also (optional) --------  Examples (optional) --------
+
+### Example
+
+* OAuth Authentication (OAuth2PasswordBearer):
+
+```python
+import time
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import model_run_api
+from rrap_mds_is_registry_api.model.model_run_list_response import ModelRunListResponse
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_run_api.ModelRunApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # List Items
+        api_response = api_instance.list_items_registry_activity_model_run_list_get()
+        pprint(api_response)
+    except rrap_mds_is_registry_api.ApiException as e:
+        print("Exception when calling ModelRunApi->list_items_registry_activity_model_run_list_get: %s\n" % e)
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ModelRunListResponse**](ModelRunListResponse.md)
+
+### Authorization
+
+[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **seed_item_registry_activity_model_run_seed_post**
+> ModelRunSeedResponse seed_item_registry_activity_model_run_seed_post()
+
+Seed Item
+
+seed_item Posts a new empty item. This will mint a handle,  set the creation time, and produce the correct  category and sub type. This can then be updated  later using the update endpoint.  Arguments ----------  Returns -------  : GenericSeedResponse     The seed item that was created.  See Also (optional) --------  Examples (optional) --------
+
+### Example
+
+* OAuth Authentication (OAuth2PasswordBearer):
+
+```python
+import time
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import model_run_api
+from rrap_mds_is_registry_api.model.model_run_seed_response import ModelRunSeedResponse
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_run_api.ModelRunApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Seed Item
+        api_response = api_instance.seed_item_registry_activity_model_run_seed_post()
+        pprint(api_response)
+    except rrap_mds_is_registry_api.ApiException as e:
+        print("Exception when calling ModelRunApi->seed_item_registry_activity_model_run_seed_post: %s\n" % e)
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ModelRunSeedResponse**](ModelRunSeedResponse.md)
+
+### Authorization
+
+[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_item_registry_activity_model_run_update_put**
+> StatusResponse update_item_registry_activity_model_run_update_put(id, model_run_domain_info)
 
 Update Item
 
@@ -691,10 +691,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update Item
-        api_response = api_instance.update_activity_model_run(id, model_run_domain_info)
+        api_response = api_instance.update_item_registry_activity_model_run_update_put(id, model_run_domain_info)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->update_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->update_item_registry_activity_model_run_update_put: %s\n" % e)
 ```
 
 
@@ -728,8 +728,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **validate_activity_model_run**
-> StatusResponse validate_activity_model_run(model_run_domain_info)
+# **validate_registry_activity_model_run_validate_post**
+> StatusResponse validate_registry_activity_model_run_validate_post(model_run_domain_info)
 
 Validate
 
@@ -814,10 +814,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Validate
-        api_response = api_instance.validate_activity_model_run(model_run_domain_info)
+        api_response = api_instance.validate_registry_activity_model_run_validate_post(model_run_domain_info)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling ModelRunApi->validate_activity_model_run: %s\n" % e)
+        print("Exception when calling ModelRunApi->validate_registry_activity_model_run_validate_post: %s\n" % e)
 ```
 
 

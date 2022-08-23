@@ -43,14 +43,14 @@ class DatasetTemplateApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
-        self.create_entity_dataset_template_endpoint = _Endpoint(
+        self.create_item_registry_entity_dataset_template_create_post_endpoint = _Endpoint(
             settings={
                 'response_type': (DatasetTemplateCreateResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/entity/dataset_template/create',
-                'operation_id': 'create_entity_dataset_template',
+                'operation_id': 'create_item_registry_entity_dataset_template_create_post',
                 'http_method': 'POST',
                 'servers': None,
             },
@@ -95,14 +95,14 @@ class DatasetTemplateApi(object):
             },
             api_client=api_client
         )
-        self.delete_entity_dataset_template_endpoint = _Endpoint(
+        self.delete_item_registry_entity_dataset_template_delete_delete_endpoint = _Endpoint(
             settings={
                 'response_type': (StatusResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/entity/dataset_template/delete',
-                'operation_id': 'delete_entity_dataset_template',
+                'operation_id': 'delete_item_registry_entity_dataset_template_delete_delete',
                 'http_method': 'DELETE',
                 'servers': None,
             },
@@ -146,14 +146,14 @@ class DatasetTemplateApi(object):
             },
             api_client=api_client
         )
-        self.fetch_entity_dataset_template_endpoint = _Endpoint(
+        self.fetch_item_registry_entity_dataset_template_fetch_get_endpoint = _Endpoint(
             settings={
                 'response_type': (DatasetTemplateFetchResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/entity/dataset_template/fetch',
-                'operation_id': 'fetch_entity_dataset_template',
+                'operation_id': 'fetch_item_registry_entity_dataset_template_fetch_get',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -202,58 +202,14 @@ class DatasetTemplateApi(object):
             },
             api_client=api_client
         )
-        self.list_entity_dataset_template_endpoint = _Endpoint(
-            settings={
-                'response_type': (DatasetTemplateListResponse,),
-                'auth': [
-                    'OAuth2PasswordBearer'
-                ],
-                'endpoint_path': '/registry/entity/dataset_template/list',
-                'operation_id': 'list_entity_dataset_template',
-                'http_method': 'GET',
-                'servers': None,
-            },
-            params_map={
-                'all': [
-                ],
-                'required': [],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
-            },
-            root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                },
-                'attribute_map': {
-                },
-                'location_map': {
-                },
-                'collection_format_map': {
-                }
-            },
-            headers_map={
-                'accept': [
-                    'application/json'
-                ],
-                'content_type': [],
-            },
-            api_client=api_client
-        )
-        self.schema_entity_dataset_template_endpoint = _Endpoint(
+        self.get_schema_registry_entity_dataset_template_schema_get_endpoint = _Endpoint(
             settings={
                 'response_type': (SchemaResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/entity/dataset_template/schema',
-                'operation_id': 'schema_entity_dataset_template',
+                'operation_id': 'get_schema_registry_entity_dataset_template_schema_get',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -290,14 +246,102 @@ class DatasetTemplateApi(object):
             },
             api_client=api_client
         )
-        self.seed_entity_dataset_template_endpoint = _Endpoint(
+        self.get_ui_schema_registry_entity_dataset_template_ui_schema_get_endpoint = _Endpoint(
+            settings={
+                'response_type': (UiSchemaResponse,),
+                'auth': [
+                    'OAuth2PasswordBearer'
+                ],
+                'endpoint_path': '/registry/entity/dataset_template/ui_schema',
+                'operation_id': 'get_ui_schema_registry_entity_dataset_template_ui_schema_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.list_items_registry_entity_dataset_template_list_get_endpoint = _Endpoint(
+            settings={
+                'response_type': (DatasetTemplateListResponse,),
+                'auth': [
+                    'OAuth2PasswordBearer'
+                ],
+                'endpoint_path': '/registry/entity/dataset_template/list',
+                'operation_id': 'list_items_registry_entity_dataset_template_list_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.seed_item_registry_entity_dataset_template_seed_post_endpoint = _Endpoint(
             settings={
                 'response_type': (DatasetTemplateSeedResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/entity/dataset_template/seed',
-                'operation_id': 'seed_entity_dataset_template',
+                'operation_id': 'seed_item_registry_entity_dataset_template_seed_post',
                 'http_method': 'POST',
                 'servers': None,
             },
@@ -334,58 +378,14 @@ class DatasetTemplateApi(object):
             },
             api_client=api_client
         )
-        self.ui_schema_entity_dataset_template_endpoint = _Endpoint(
-            settings={
-                'response_type': (UiSchemaResponse,),
-                'auth': [
-                    'OAuth2PasswordBearer'
-                ],
-                'endpoint_path': '/registry/entity/dataset_template/ui_schema',
-                'operation_id': 'ui_schema_entity_dataset_template',
-                'http_method': 'GET',
-                'servers': None,
-            },
-            params_map={
-                'all': [
-                ],
-                'required': [],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
-            },
-            root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                },
-                'attribute_map': {
-                },
-                'location_map': {
-                },
-                'collection_format_map': {
-                }
-            },
-            headers_map={
-                'accept': [
-                    'application/json'
-                ],
-                'content_type': [],
-            },
-            api_client=api_client
-        )
-        self.update_entity_dataset_template_endpoint = _Endpoint(
+        self.update_item_registry_entity_dataset_template_update_put_endpoint = _Endpoint(
             settings={
                 'response_type': (StatusResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/entity/dataset_template/update',
-                'operation_id': 'update_entity_dataset_template',
+                'operation_id': 'update_item_registry_entity_dataset_template_update_put',
                 'http_method': 'PUT',
                 'servers': None,
             },
@@ -436,14 +436,14 @@ class DatasetTemplateApi(object):
             },
             api_client=api_client
         )
-        self.validate_entity_dataset_template_endpoint = _Endpoint(
+        self.validate_registry_entity_dataset_template_validate_post_endpoint = _Endpoint(
             settings={
                 'response_type': (StatusResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
                 'endpoint_path': '/registry/entity/dataset_template/validate',
-                'operation_id': 'validate_entity_dataset_template',
+                'operation_id': 'validate_registry_entity_dataset_template_validate_post',
                 'http_method': 'POST',
                 'servers': None,
             },
@@ -489,7 +489,7 @@ class DatasetTemplateApi(object):
             api_client=api_client
         )
 
-    def create_entity_dataset_template(
+    def create_item_registry_entity_dataset_template_create_post(
         self,
         dataset_template_domain_info,
         **kwargs
@@ -500,7 +500,7 @@ class DatasetTemplateApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_entity_dataset_template(dataset_template_domain_info, async_req=True)
+        >>> thread = api.create_item_registry_entity_dataset_template_create_post(dataset_template_domain_info, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -570,9 +570,9 @@ class DatasetTemplateApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['dataset_template_domain_info'] = \
             dataset_template_domain_info
-        return self.create_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
+        return self.create_item_registry_entity_dataset_template_create_post_endpoint.call_with_http_info(**kwargs)
 
-    def delete_entity_dataset_template(
+    def delete_item_registry_entity_dataset_template_delete_delete(
         self,
         id,
         **kwargs
@@ -583,7 +583,7 @@ class DatasetTemplateApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_entity_dataset_template(id, async_req=True)
+        >>> thread = api.delete_item_registry_entity_dataset_template_delete_delete(id, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -653,9 +653,9 @@ class DatasetTemplateApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['id'] = \
             id
-        return self.delete_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
+        return self.delete_item_registry_entity_dataset_template_delete_delete_endpoint.call_with_http_info(**kwargs)
 
-    def fetch_entity_dataset_template(
+    def fetch_item_registry_entity_dataset_template_fetch_get(
         self,
         id,
         **kwargs
@@ -666,7 +666,7 @@ class DatasetTemplateApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.fetch_entity_dataset_template(id, async_req=True)
+        >>> thread = api.fetch_item_registry_entity_dataset_template_fetch_get(id, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -737,87 +737,9 @@ class DatasetTemplateApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['id'] = \
             id
-        return self.fetch_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
+        return self.fetch_item_registry_entity_dataset_template_fetch_get_endpoint.call_with_http_info(**kwargs)
 
-    def list_entity_dataset_template(
-        self,
-        **kwargs
-    ):
-        """List Items  # noqa: E501
-
-        list_items Lists all items of the specified type (by route). Sorts items  into parsable complete entities (i.e. normal entities), parsable  seed items (i.e. incomplete), and completely unparsable entities.   If there are any unparsable entities, the success field of the return  status will be False, however the items will still be provided.   Arguments ----------  Returns -------  : GenericListResponse     The list of items, sorted complete, seed and unparsable, as well      as counts for each type.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.list_entity_dataset_template(async_req=True)
-        >>> result = thread.get()
-
-
-        Keyword Args:
-            _return_http_data_only (bool): response data without head status
-                code and headers. Default is True.
-            _preload_content (bool): if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            _request_timeout (int/float/tuple): timeout setting for this request. If
-                one number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            _check_input_type (bool): specifies if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            _check_return_type (bool): specifies if type checking
-                should be done one the data received from the server.
-                Default is True.
-            _spec_property_naming (bool): True if the variable names in the input data
-                are serialized names, as specified in the OpenAPI document.
-                False if the variable names in the input data
-                are pythonic names, e.g. snake case (default)
-            _content_type (str/None): force body content-type.
-                Default is None and content-type will be predicted by allowed
-                content-types and body.
-            _host_index (int/None): specifies the index of the server
-                that we want to use.
-                Default is read from the configuration.
-            _request_auths (list): set to override the auth_settings for an a single
-                request; this effectively ignores the authentication
-                in the spec for a single request.
-                Default is None
-            async_req (bool): execute request asynchronously
-
-        Returns:
-            DatasetTemplateListResponse
-                If the method is called asynchronously, returns the request
-                thread.
-        """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        return self.list_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
-
-    def schema_entity_dataset_template(
+    def get_schema_registry_entity_dataset_template_schema_get(
         self,
         **kwargs
     ):
@@ -827,7 +749,7 @@ class DatasetTemplateApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.schema_entity_dataset_template(async_req=True)
+        >>> thread = api.get_schema_registry_entity_dataset_template_schema_get(async_req=True)
         >>> result = thread.get()
 
 
@@ -893,87 +815,9 @@ class DatasetTemplateApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        return self.schema_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
+        return self.get_schema_registry_entity_dataset_template_schema_get_endpoint.call_with_http_info(**kwargs)
 
-    def seed_entity_dataset_template(
-        self,
-        **kwargs
-    ):
-        """Seed Item  # noqa: E501
-
-        seed_item Posts a new empty item. This will mint a handle,  set the creation time, and produce the correct  category and sub type. This can then be updated  later using the update endpoint.  Arguments ----------  Returns -------  : GenericSeedResponse     The seed item that was created.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.seed_entity_dataset_template(async_req=True)
-        >>> result = thread.get()
-
-
-        Keyword Args:
-            _return_http_data_only (bool): response data without head status
-                code and headers. Default is True.
-            _preload_content (bool): if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            _request_timeout (int/float/tuple): timeout setting for this request. If
-                one number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            _check_input_type (bool): specifies if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            _check_return_type (bool): specifies if type checking
-                should be done one the data received from the server.
-                Default is True.
-            _spec_property_naming (bool): True if the variable names in the input data
-                are serialized names, as specified in the OpenAPI document.
-                False if the variable names in the input data
-                are pythonic names, e.g. snake case (default)
-            _content_type (str/None): force body content-type.
-                Default is None and content-type will be predicted by allowed
-                content-types and body.
-            _host_index (int/None): specifies the index of the server
-                that we want to use.
-                Default is read from the configuration.
-            _request_auths (list): set to override the auth_settings for an a single
-                request; this effectively ignores the authentication
-                in the spec for a single request.
-                Default is None
-            async_req (bool): execute request asynchronously
-
-        Returns:
-            DatasetTemplateSeedResponse
-                If the method is called asynchronously, returns the request
-                thread.
-        """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        return self.seed_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
-
-    def ui_schema_entity_dataset_template(
+    def get_ui_schema_registry_entity_dataset_template_ui_schema_get(
         self,
         **kwargs
     ):
@@ -983,7 +827,7 @@ class DatasetTemplateApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.ui_schema_entity_dataset_template(async_req=True)
+        >>> thread = api.get_ui_schema_registry_entity_dataset_template_ui_schema_get(async_req=True)
         >>> result = thread.get()
 
 
@@ -1049,9 +893,165 @@ class DatasetTemplateApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
-        return self.ui_schema_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
+        return self.get_ui_schema_registry_entity_dataset_template_ui_schema_get_endpoint.call_with_http_info(**kwargs)
 
-    def update_entity_dataset_template(
+    def list_items_registry_entity_dataset_template_list_get(
+        self,
+        **kwargs
+    ):
+        """List Items  # noqa: E501
+
+        list_items Lists all items of the specified type (by route). Sorts items  into parsable complete entities (i.e. normal entities), parsable  seed items (i.e. incomplete), and completely unparsable entities.   If there are any unparsable entities, the success field of the return  status will be False, however the items will still be provided.   Arguments ----------  Returns -------  : GenericListResponse     The list of items, sorted complete, seed and unparsable, as well      as counts for each type.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.list_items_registry_entity_dataset_template_list_get(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            DatasetTemplateListResponse
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.list_items_registry_entity_dataset_template_list_get_endpoint.call_with_http_info(**kwargs)
+
+    def seed_item_registry_entity_dataset_template_seed_post(
+        self,
+        **kwargs
+    ):
+        """Seed Item  # noqa: E501
+
+        seed_item Posts a new empty item. This will mint a handle,  set the creation time, and produce the correct  category and sub type. This can then be updated  later using the update endpoint.  Arguments ----------  Returns -------  : GenericSeedResponse     The seed item that was created.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.seed_item_registry_entity_dataset_template_seed_post(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            _request_auths (list): set to override the auth_settings for an a single
+                request; this effectively ignores the authentication
+                in the spec for a single request.
+                Default is None
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            DatasetTemplateSeedResponse
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['_request_auths'] = kwargs.get('_request_auths', None)
+        return self.seed_item_registry_entity_dataset_template_seed_post_endpoint.call_with_http_info(**kwargs)
+
+    def update_item_registry_entity_dataset_template_update_put(
         self,
         id,
         dataset_template_domain_info,
@@ -1063,7 +1063,7 @@ class DatasetTemplateApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_entity_dataset_template(id, dataset_template_domain_info, async_req=True)
+        >>> thread = api.update_item_registry_entity_dataset_template_update_put(id, dataset_template_domain_info, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -1136,9 +1136,9 @@ class DatasetTemplateApi(object):
             id
         kwargs['dataset_template_domain_info'] = \
             dataset_template_domain_info
-        return self.update_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
+        return self.update_item_registry_entity_dataset_template_update_put_endpoint.call_with_http_info(**kwargs)
 
-    def validate_entity_dataset_template(
+    def validate_registry_entity_dataset_template_validate_post(
         self,
         dataset_template_domain_info,
         **kwargs
@@ -1149,7 +1149,7 @@ class DatasetTemplateApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.validate_entity_dataset_template(dataset_template_domain_info, async_req=True)
+        >>> thread = api.validate_registry_entity_dataset_template_validate_post(dataset_template_domain_info, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -1219,5 +1219,5 @@ class DatasetTemplateApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['dataset_template_domain_info'] = \
             dataset_template_domain_info
-        return self.validate_entity_dataset_template_endpoint.call_with_http_info(**kwargs)
+        return self.validate_registry_entity_dataset_template_validate_post_endpoint.call_with_http_info(**kwargs)
 

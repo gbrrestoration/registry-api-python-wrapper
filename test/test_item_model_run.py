@@ -12,12 +12,8 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.item_category import ItemCategory
-from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
 from rrap_mds_is_registry_api.model.model_run_record import ModelRunRecord
 from rrap_mds_is_registry_api.model.workflow_run_completion_status import WorkflowRunCompletionStatus
-globals()['ItemCategory'] = ItemCategory
-globals()['ItemSubType'] = ItemSubType
 globals()['ModelRunRecord'] = ModelRunRecord
 globals()['WorkflowRunCompletionStatus'] = WorkflowRunCompletionStatus
 from rrap_mds_is_registry_api.model.item_model_run import ItemModelRun

@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_agent_person**](PersonApi.md#create_agent_person) | **POST** /registry/agent/person/create | Create Item
-[**delete_agent_person**](PersonApi.md#delete_agent_person) | **DELETE** /registry/agent/person/delete | Delete Item
-[**fetch_agent_person**](PersonApi.md#fetch_agent_person) | **GET** /registry/agent/person/fetch | Fetch Item
-[**list_agent_person**](PersonApi.md#list_agent_person) | **GET** /registry/agent/person/list | List Items
-[**schema_agent_person**](PersonApi.md#schema_agent_person) | **GET** /registry/agent/person/schema | Get Schema
-[**seed_agent_person**](PersonApi.md#seed_agent_person) | **POST** /registry/agent/person/seed | Seed Item
-[**ui_schema_agent_person**](PersonApi.md#ui_schema_agent_person) | **GET** /registry/agent/person/ui_schema | Get Ui Schema
-[**update_agent_person**](PersonApi.md#update_agent_person) | **PUT** /registry/agent/person/update | Update Item
-[**validate_agent_person**](PersonApi.md#validate_agent_person) | **POST** /registry/agent/person/validate | Validate
+[**create_item_registry_agent_person_create_post**](PersonApi.md#create_item_registry_agent_person_create_post) | **POST** /registry/agent/person/create | Create Item
+[**delete_item_registry_agent_person_delete_delete**](PersonApi.md#delete_item_registry_agent_person_delete_delete) | **DELETE** /registry/agent/person/delete | Delete Item
+[**fetch_item_registry_agent_person_fetch_get**](PersonApi.md#fetch_item_registry_agent_person_fetch_get) | **GET** /registry/agent/person/fetch | Fetch Item
+[**get_schema_registry_agent_person_schema_get**](PersonApi.md#get_schema_registry_agent_person_schema_get) | **GET** /registry/agent/person/schema | Get Schema
+[**get_ui_schema_registry_agent_person_ui_schema_get**](PersonApi.md#get_ui_schema_registry_agent_person_ui_schema_get) | **GET** /registry/agent/person/ui_schema | Get Ui Schema
+[**list_items_registry_agent_person_list_get**](PersonApi.md#list_items_registry_agent_person_list_get) | **GET** /registry/agent/person/list | List Items
+[**seed_item_registry_agent_person_seed_post**](PersonApi.md#seed_item_registry_agent_person_seed_post) | **POST** /registry/agent/person/seed | Seed Item
+[**update_item_registry_agent_person_update_put**](PersonApi.md#update_item_registry_agent_person_update_put) | **PUT** /registry/agent/person/update | Update Item
+[**validate_registry_agent_person_validate_post**](PersonApi.md#validate_registry_agent_person_validate_post) | **POST** /registry/agent/person/validate | Validate
 
 
-# **create_agent_person**
-> PersonCreateResponse create_agent_person(person_domain_info)
+# **create_item_registry_agent_person_create_post**
+> PersonCreateResponse create_item_registry_agent_person_create_post(person_domain_info)
 
 Create Item
 
@@ -66,10 +66,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Create Item
-        api_response = api_instance.create_agent_person(person_domain_info)
+        api_response = api_instance.create_item_registry_agent_person_create_post(person_domain_info)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->create_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->create_item_registry_agent_person_create_post: %s\n" % e)
 ```
 
 
@@ -102,8 +102,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_agent_person**
-> StatusResponse delete_agent_person(id)
+# **delete_item_registry_agent_person_delete_delete**
+> StatusResponse delete_item_registry_agent_person_delete_delete(id)
 
 Delete Item
 
@@ -146,10 +146,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Delete Item
-        api_response = api_instance.delete_agent_person(id)
+        api_response = api_instance.delete_item_registry_agent_person_delete_delete(id)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->delete_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->delete_item_registry_agent_person_delete_delete: %s\n" % e)
 ```
 
 
@@ -182,8 +182,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **fetch_agent_person**
-> PersonFetchResponse fetch_agent_person(id)
+# **fetch_item_registry_agent_person_fetch_get**
+> PersonFetchResponse fetch_item_registry_agent_person_fetch_get(id)
 
 Fetch Item
 
@@ -227,19 +227,19 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Fetch Item
-        api_response = api_instance.fetch_agent_person(id)
+        api_response = api_instance.fetch_item_registry_agent_person_fetch_get(id)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->fetch_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->fetch_item_registry_agent_person_fetch_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Fetch Item
-        api_response = api_instance.fetch_agent_person(id, seed_allowed=seed_allowed)
+        api_response = api_instance.fetch_item_registry_agent_person_fetch_get(id, seed_allowed=seed_allowed)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->fetch_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->fetch_item_registry_agent_person_fetch_get: %s\n" % e)
 ```
 
 
@@ -273,82 +273,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_agent_person**
-> PersonListResponse list_agent_person()
-
-List Items
-
-list_items Lists all items of the specified type (by route). Sorts items  into parsable complete entities (i.e. normal entities), parsable  seed items (i.e. incomplete), and completely unparsable entities.   If there are any unparsable entities, the success field of the return  status will be False, however the items will still be provided.   Arguments ----------  Returns -------  : GenericListResponse     The list of items, sorted complete, seed and unparsable, as well      as counts for each type.  See Also (optional) --------  Examples (optional) --------
-
-### Example
-
-* OAuth Authentication (OAuth2PasswordBearer):
-
-```python
-import time
-import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.api import person_api
-from rrap_mds_is_registry_api.model.person_list_response import PersonListResponse
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = person_api.PersonApi(api_client)
-
-    # example, this endpoint has no required or optional parameters
-    try:
-        # List Items
-        api_response = api_instance.list_agent_person()
-        pprint(api_response)
-    except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->list_agent_person: %s\n" % e)
-```
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**PersonListResponse**](PersonListResponse.md)
-
-### Authorization
-
-[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **schema_agent_person**
-> SchemaResponse schema_agent_person()
+# **get_schema_registry_agent_person_schema_get**
+> SchemaResponse get_schema_registry_agent_person_schema_get()
 
 Get Schema
 
@@ -389,10 +315,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example, this endpoint has no required or optional parameters
     try:
         # Get Schema
-        api_response = api_instance.schema_agent_person()
+        api_response = api_instance.get_schema_registry_agent_person_schema_get()
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->schema_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->get_schema_registry_agent_person_schema_get: %s\n" % e)
 ```
 
 
@@ -421,82 +347,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **seed_agent_person**
-> PersonSeedResponse seed_agent_person()
-
-Seed Item
-
-seed_item Posts a new empty item. This will mint a handle,  set the creation time, and produce the correct  category and sub type. This can then be updated  later using the update endpoint.  Arguments ----------  Returns -------  : GenericSeedResponse     The seed item that was created.  See Also (optional) --------  Examples (optional) --------
-
-### Example
-
-* OAuth Authentication (OAuth2PasswordBearer):
-
-```python
-import time
-import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.api import person_api
-from rrap_mds_is_registry_api.model.person_seed_response import PersonSeedResponse
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
-configuration = rrap_mds_is_registry_api.Configuration(
-    host = "http://localhost"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = person_api.PersonApi(api_client)
-
-    # example, this endpoint has no required or optional parameters
-    try:
-        # Seed Item
-        api_response = api_instance.seed_agent_person()
-        pprint(api_response)
-    except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->seed_agent_person: %s\n" % e)
-```
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**PersonSeedResponse**](PersonSeedResponse.md)
-
-### Authorization
-
-[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful Response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ui_schema_agent_person**
-> UiSchemaResponse ui_schema_agent_person()
+# **get_ui_schema_registry_agent_person_ui_schema_get**
+> UiSchemaResponse get_ui_schema_registry_agent_person_ui_schema_get()
 
 Get Ui Schema
 
@@ -537,10 +389,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example, this endpoint has no required or optional parameters
     try:
         # Get Ui Schema
-        api_response = api_instance.ui_schema_agent_person()
+        api_response = api_instance.get_ui_schema_registry_agent_person_ui_schema_get()
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->ui_schema_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->get_ui_schema_registry_agent_person_ui_schema_get: %s\n" % e)
 ```
 
 
@@ -569,8 +421,156 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_agent_person**
-> StatusResponse update_agent_person(id, person_domain_info)
+# **list_items_registry_agent_person_list_get**
+> PersonListResponse list_items_registry_agent_person_list_get()
+
+List Items
+
+list_items Lists all items of the specified type (by route). Sorts items  into parsable complete entities (i.e. normal entities), parsable  seed items (i.e. incomplete), and completely unparsable entities.   If there are any unparsable entities, the success field of the return  status will be False, however the items will still be provided.   Arguments ----------  Returns -------  : GenericListResponse     The list of items, sorted complete, seed and unparsable, as well      as counts for each type.  See Also (optional) --------  Examples (optional) --------
+
+### Example
+
+* OAuth Authentication (OAuth2PasswordBearer):
+
+```python
+import time
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import person_api
+from rrap_mds_is_registry_api.model.person_list_response import PersonListResponse
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = person_api.PersonApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # List Items
+        api_response = api_instance.list_items_registry_agent_person_list_get()
+        pprint(api_response)
+    except rrap_mds_is_registry_api.ApiException as e:
+        print("Exception when calling PersonApi->list_items_registry_agent_person_list_get: %s\n" % e)
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PersonListResponse**](PersonListResponse.md)
+
+### Authorization
+
+[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **seed_item_registry_agent_person_seed_post**
+> PersonSeedResponse seed_item_registry_agent_person_seed_post()
+
+Seed Item
+
+seed_item Posts a new empty item. This will mint a handle,  set the creation time, and produce the correct  category and sub type. This can then be updated  later using the update endpoint.  Arguments ----------  Returns -------  : GenericSeedResponse     The seed item that was created.  See Also (optional) --------  Examples (optional) --------
+
+### Example
+
+* OAuth Authentication (OAuth2PasswordBearer):
+
+```python
+import time
+import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.api import person_api
+from rrap_mds_is_registry_api.model.person_seed_response import PersonSeedResponse
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: OAuth2PasswordBearer
+configuration = rrap_mds_is_registry_api.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = person_api.PersonApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Seed Item
+        api_response = api_instance.seed_item_registry_agent_person_seed_post()
+        pprint(api_response)
+    except rrap_mds_is_registry_api.ApiException as e:
+        print("Exception when calling PersonApi->seed_item_registry_agent_person_seed_post: %s\n" % e)
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PersonSeedResponse**](PersonSeedResponse.md)
+
+### Authorization
+
+[OAuth2PasswordBearer](../README.md#OAuth2PasswordBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_item_registry_agent_person_update_put**
+> StatusResponse update_item_registry_agent_person_update_put(id, person_domain_info)
 
 Update Item
 
@@ -621,10 +621,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update Item
-        api_response = api_instance.update_agent_person(id, person_domain_info)
+        api_response = api_instance.update_item_registry_agent_person_update_put(id, person_domain_info)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->update_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->update_item_registry_agent_person_update_put: %s\n" % e)
 ```
 
 
@@ -658,8 +658,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **validate_agent_person**
-> StatusResponse validate_agent_person(person_domain_info)
+# **validate_registry_agent_person_validate_post**
+> StatusResponse validate_registry_agent_person_validate_post(person_domain_info)
 
 Validate
 
@@ -709,10 +709,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Validate
-        api_response = api_instance.validate_agent_person(person_domain_info)
+        api_response = api_instance.validate_registry_agent_person_validate_post(person_domain_info)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling PersonApi->validate_agent_person: %s\n" % e)
+        print("Exception when calling PersonApi->validate_registry_agent_person_validate_post: %s\n" % e)
 ```
 
 

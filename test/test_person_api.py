@@ -23,64 +23,64 @@ class TestPersonApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_agent_person(self):
-        """Test case for create_agent_person
+    def test_create_item_registry_agent_person_create_post(self):
+        """Test case for create_item_registry_agent_person_create_post
 
         Create Item  # noqa: E501
         """
         pass
 
-    def test_delete_agent_person(self):
-        """Test case for delete_agent_person
+    def test_delete_item_registry_agent_person_delete_delete(self):
+        """Test case for delete_item_registry_agent_person_delete_delete
 
         Delete Item  # noqa: E501
         """
         pass
 
-    def test_fetch_agent_person(self):
-        """Test case for fetch_agent_person
+    def test_fetch_item_registry_agent_person_fetch_get(self):
+        """Test case for fetch_item_registry_agent_person_fetch_get
 
         Fetch Item  # noqa: E501
         """
         pass
 
-    def test_list_agent_person(self):
-        """Test case for list_agent_person
-
-        List Items  # noqa: E501
-        """
-        pass
-
-    def test_schema_agent_person(self):
-        """Test case for schema_agent_person
+    def test_get_schema_registry_agent_person_schema_get(self):
+        """Test case for get_schema_registry_agent_person_schema_get
 
         Get Schema  # noqa: E501
         """
         pass
 
-    def test_seed_agent_person(self):
-        """Test case for seed_agent_person
-
-        Seed Item  # noqa: E501
-        """
-        pass
-
-    def test_ui_schema_agent_person(self):
-        """Test case for ui_schema_agent_person
+    def test_get_ui_schema_registry_agent_person_ui_schema_get(self):
+        """Test case for get_ui_schema_registry_agent_person_ui_schema_get
 
         Get Ui Schema  # noqa: E501
         """
         pass
 
-    def test_update_agent_person(self):
-        """Test case for update_agent_person
+    def test_list_items_registry_agent_person_list_get(self):
+        """Test case for list_items_registry_agent_person_list_get
+
+        List Items  # noqa: E501
+        """
+        pass
+
+    def test_seed_item_registry_agent_person_seed_post(self):
+        """Test case for seed_item_registry_agent_person_seed_post
+
+        Seed Item  # noqa: E501
+        """
+        pass
+
+    def test_update_item_registry_agent_person_update_put(self):
+        """Test case for update_item_registry_agent_person_update_put
 
         Update Item  # noqa: E501
         """
         pass
 
-    def test_validate_agent_person(self):
-        """Test case for validate_agent_person
+    def test_validate_registry_agent_person_validate_post(self):
+        """Test case for validate_registry_agent_person_validate_post
 
         Validate  # noqa: E501
         """

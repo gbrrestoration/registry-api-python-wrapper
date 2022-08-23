@@ -23,29 +23,29 @@ class TestAccessCheckApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_check_admin_access(self):
-        """Test case for check_admin_access
+    def test_check_admin_access_check_access_check_admin_access_get(self):
+        """Test case for check_admin_access_check_access_check_admin_access_get
 
         Check Admin Access  # noqa: E501
         """
         pass
 
-    def test_check_general_access(self):
-        """Test case for check_general_access
+    def test_check_general_access_check_access_check_general_access_get(self):
+        """Test case for check_general_access_check_access_check_general_access_get
 
         Check General Access  # noqa: E501
         """
         pass
 
-    def test_check_read_access(self):
-        """Test case for check_read_access
+    def test_check_read_access_check_access_check_read_access_get(self):
+        """Test case for check_read_access_check_access_check_read_access_get
 
         Check Read Access  # noqa: E501
         """
         pass
 
-    def test_check_write_access(self):
-        """Test case for check_write_access
+    def test_check_write_access_check_access_check_write_access_get(self):
+        """Test case for check_write_access_check_access_check_write_access_get
 
         Check Write Access  # noqa: E501
         """
