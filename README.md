@@ -148,7 +148,7 @@ Class | Method | HTTP request | Description
 *PersonApi* | [**ui_schema_agent_person**](docs/PersonApi.md#ui_schema_agent_person) | **GET** /registry/agent/person/ui_schema | Get Ui Schema
 *PersonApi* | [**update_agent_person**](docs/PersonApi.md#update_agent_person) | **PUT** /registry/agent/person/update | Update Item
 *PersonApi* | [**validate_agent_person**](docs/PersonApi.md#validate_agent_person) | **POST** /registry/agent/person/validate | Validate
-*DefaultApi* | [**root_get**](docs/DefaultApi.md#root_get) | **GET** / | Root
+*DefaultApi* | [**root**](docs/DefaultApi.md#root) | **GET** / | Root
 
 
 ## Documentation For Models
