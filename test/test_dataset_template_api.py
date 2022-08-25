@@ -23,64 +23,64 @@ class TestDatasetTemplateApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_item_registry_entity_dataset_template_create_post(self):
-        """Test case for create_item_registry_entity_dataset_template_create_post
+    def test_create_entity_dataset_template(self):
+        """Test case for create_entity_dataset_template
 
         Create Item  # noqa: E501
         """
         pass
 
-    def test_delete_item_registry_entity_dataset_template_delete_delete(self):
-        """Test case for delete_item_registry_entity_dataset_template_delete_delete
+    def test_delete_entity_dataset_template(self):
+        """Test case for delete_entity_dataset_template
 
         Delete Item  # noqa: E501
         """
         pass
 
-    def test_fetch_item_registry_entity_dataset_template_fetch_get(self):
-        """Test case for fetch_item_registry_entity_dataset_template_fetch_get
+    def test_fetch_entity_dataset_template(self):
+        """Test case for fetch_entity_dataset_template
 
         Fetch Item  # noqa: E501
         """
         pass
 
-    def test_get_schema_registry_entity_dataset_template_schema_get(self):
-        """Test case for get_schema_registry_entity_dataset_template_schema_get
-
-        Get Schema  # noqa: E501
-        """
-        pass
-
-    def test_get_ui_schema_registry_entity_dataset_template_ui_schema_get(self):
-        """Test case for get_ui_schema_registry_entity_dataset_template_ui_schema_get
-
-        Get Ui Schema  # noqa: E501
-        """
-        pass
-
-    def test_list_items_registry_entity_dataset_template_list_get(self):
-        """Test case for list_items_registry_entity_dataset_template_list_get
+    def test_list_entity_dataset_template(self):
+        """Test case for list_entity_dataset_template
 
         List Items  # noqa: E501
         """
         pass
 
-    def test_seed_item_registry_entity_dataset_template_seed_post(self):
-        """Test case for seed_item_registry_entity_dataset_template_seed_post
+    def test_schema_entity_dataset_template(self):
+        """Test case for schema_entity_dataset_template
+
+        Get Schema  # noqa: E501
+        """
+        pass
+
+    def test_seed_entity_dataset_template(self):
+        """Test case for seed_entity_dataset_template
 
         Seed Item  # noqa: E501
         """
         pass
 
-    def test_update_item_registry_entity_dataset_template_update_put(self):
-        """Test case for update_item_registry_entity_dataset_template_update_put
+    def test_ui_schema_entity_dataset_template(self):
+        """Test case for ui_schema_entity_dataset_template
+
+        Get Ui Schema  # noqa: E501
+        """
+        pass
+
+    def test_update_entity_dataset_template(self):
+        """Test case for update_entity_dataset_template
 
         Update Item  # noqa: E501
         """
         pass
 
-    def test_validate_registry_entity_dataset_template_validate_post(self):
-        """Test case for validate_registry_entity_dataset_template_validate_post
+    def test_validate_entity_dataset_template(self):
+        """Test case for validate_entity_dataset_template
 
         Validate  # noqa: E501
         """

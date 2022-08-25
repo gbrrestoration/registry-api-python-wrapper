@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fetch_item_registry_general_fetch_get**](GeneralRegistryApi.md#fetch_item_registry_general_fetch_get) | **GET** /registry/general/fetch | Fetch Item
-[**list_items_registry_general_list_post**](GeneralRegistryApi.md#list_items_registry_general_list_post) | **POST** /registry/general/list | List Items
+[**fetch**](GeneralRegistryApi.md#fetch) | **GET** /registry/general/fetch | Fetch Item
+[**list**](GeneralRegistryApi.md#list) | **POST** /registry/general/list | List Items
 
 
-# **fetch_item_registry_general_fetch_get**
-> UntypedFetchResponse fetch_item_registry_general_fetch_get(id)
+# **fetch**
+> UntypedFetchResponse fetch(id)
 
 Fetch Item
 
@@ -50,10 +50,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Fetch Item
-        api_response = api_instance.fetch_item_registry_general_fetch_get(id)
+        api_response = api_instance.fetch(id)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling GeneralRegistryApi->fetch_item_registry_general_fetch_get: %s\n" % e)
+        print("Exception when calling GeneralRegistryApi->fetch: %s\n" % e)
 ```
 
 
@@ -86,8 +86,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_items_registry_general_list_post**
-> UnparsedListResponse list_items_registry_general_list_post(query_filter)
+# **list**
+> UnparsedListResponse list(query_filter)
 
 List Items
 
@@ -134,10 +134,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # List Items
-        api_response = api_instance.list_items_registry_general_list_post(query_filter)
+        api_response = api_instance.list(query_filter)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling GeneralRegistryApi->list_items_registry_general_list_post: %s\n" % e)
+        print("Exception when calling GeneralRegistryApi->list: %s\n" % e)
 ```
 
 

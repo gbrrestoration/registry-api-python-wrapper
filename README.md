@@ -76,10 +76,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
 
     try:
         # Check Admin Access
-        api_response = api_instance.check_admin_access_check_access_check_admin_access_get()
+        api_response = api_instance.check_admin_access()
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
-        print("Exception when calling AccessCheckApi->check_admin_access_check_access_check_admin_access_get: %s\n" % e)
+        print("Exception when calling AccessCheckApi->check_admin_access: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -88,67 +88,67 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccessCheckApi* | [**check_admin_access_check_access_check_admin_access_get**](docs/AccessCheckApi.md#check_admin_access_check_access_check_admin_access_get) | **GET** /check-access/check-admin-access | Check Admin Access
-*AccessCheckApi* | [**check_general_access_check_access_check_general_access_get**](docs/AccessCheckApi.md#check_general_access_check_access_check_general_access_get) | **GET** /check-access/check-general-access | Check General Access
-*AccessCheckApi* | [**check_read_access_check_access_check_read_access_get**](docs/AccessCheckApi.md#check_read_access_check_access_check_read_access_get) | **GET** /check-access/check-read-access | Check Read Access
-*AccessCheckApi* | [**check_write_access_check_access_check_write_access_get**](docs/AccessCheckApi.md#check_write_access_check_access_check_write_access_get) | **GET** /check-access/check-write-access | Check Write Access
-*DatasetTemplateApi* | [**create_item_registry_entity_dataset_template_create_post**](docs/DatasetTemplateApi.md#create_item_registry_entity_dataset_template_create_post) | **POST** /registry/entity/dataset_template/create | Create Item
-*DatasetTemplateApi* | [**delete_item_registry_entity_dataset_template_delete_delete**](docs/DatasetTemplateApi.md#delete_item_registry_entity_dataset_template_delete_delete) | **DELETE** /registry/entity/dataset_template/delete | Delete Item
-*DatasetTemplateApi* | [**fetch_item_registry_entity_dataset_template_fetch_get**](docs/DatasetTemplateApi.md#fetch_item_registry_entity_dataset_template_fetch_get) | **GET** /registry/entity/dataset_template/fetch | Fetch Item
-*DatasetTemplateApi* | [**get_schema_registry_entity_dataset_template_schema_get**](docs/DatasetTemplateApi.md#get_schema_registry_entity_dataset_template_schema_get) | **GET** /registry/entity/dataset_template/schema | Get Schema
-*DatasetTemplateApi* | [**get_ui_schema_registry_entity_dataset_template_ui_schema_get**](docs/DatasetTemplateApi.md#get_ui_schema_registry_entity_dataset_template_ui_schema_get) | **GET** /registry/entity/dataset_template/ui_schema | Get Ui Schema
-*DatasetTemplateApi* | [**list_items_registry_entity_dataset_template_list_get**](docs/DatasetTemplateApi.md#list_items_registry_entity_dataset_template_list_get) | **GET** /registry/entity/dataset_template/list | List Items
-*DatasetTemplateApi* | [**seed_item_registry_entity_dataset_template_seed_post**](docs/DatasetTemplateApi.md#seed_item_registry_entity_dataset_template_seed_post) | **POST** /registry/entity/dataset_template/seed | Seed Item
-*DatasetTemplateApi* | [**update_item_registry_entity_dataset_template_update_put**](docs/DatasetTemplateApi.md#update_item_registry_entity_dataset_template_update_put) | **PUT** /registry/entity/dataset_template/update | Update Item
-*DatasetTemplateApi* | [**validate_registry_entity_dataset_template_validate_post**](docs/DatasetTemplateApi.md#validate_registry_entity_dataset_template_validate_post) | **POST** /registry/entity/dataset_template/validate | Validate
-*GeneralRegistryApi* | [**fetch_item_registry_general_fetch_get**](docs/GeneralRegistryApi.md#fetch_item_registry_general_fetch_get) | **GET** /registry/general/fetch | Fetch Item
-*GeneralRegistryApi* | [**list_items_registry_general_list_post**](docs/GeneralRegistryApi.md#list_items_registry_general_list_post) | **POST** /registry/general/list | List Items
-*ModelApi* | [**create_item_registry_entity_model_create_post**](docs/ModelApi.md#create_item_registry_entity_model_create_post) | **POST** /registry/entity/model/create | Create Item
-*ModelApi* | [**delete_item_registry_entity_model_delete_delete**](docs/ModelApi.md#delete_item_registry_entity_model_delete_delete) | **DELETE** /registry/entity/model/delete | Delete Item
-*ModelApi* | [**fetch_item_registry_entity_model_fetch_get**](docs/ModelApi.md#fetch_item_registry_entity_model_fetch_get) | **GET** /registry/entity/model/fetch | Fetch Item
-*ModelApi* | [**get_schema_registry_entity_model_schema_get**](docs/ModelApi.md#get_schema_registry_entity_model_schema_get) | **GET** /registry/entity/model/schema | Get Schema
-*ModelApi* | [**get_ui_schema_registry_entity_model_ui_schema_get**](docs/ModelApi.md#get_ui_schema_registry_entity_model_ui_schema_get) | **GET** /registry/entity/model/ui_schema | Get Ui Schema
-*ModelApi* | [**list_items_registry_entity_model_list_get**](docs/ModelApi.md#list_items_registry_entity_model_list_get) | **GET** /registry/entity/model/list | List Items
-*ModelApi* | [**seed_item_registry_entity_model_seed_post**](docs/ModelApi.md#seed_item_registry_entity_model_seed_post) | **POST** /registry/entity/model/seed | Seed Item
-*ModelApi* | [**update_item_registry_entity_model_update_put**](docs/ModelApi.md#update_item_registry_entity_model_update_put) | **PUT** /registry/entity/model/update | Update Item
-*ModelApi* | [**validate_registry_entity_model_validate_post**](docs/ModelApi.md#validate_registry_entity_model_validate_post) | **POST** /registry/entity/model/validate | Validate
-*ModelRunApi* | [**create_item_registry_activity_model_run_create_post**](docs/ModelRunApi.md#create_item_registry_activity_model_run_create_post) | **POST** /registry/activity/model_run/create | Create Item
-*ModelRunApi* | [**delete_item_registry_activity_model_run_delete_delete**](docs/ModelRunApi.md#delete_item_registry_activity_model_run_delete_delete) | **DELETE** /registry/activity/model_run/delete | Delete Item
-*ModelRunApi* | [**fetch_item_registry_activity_model_run_fetch_get**](docs/ModelRunApi.md#fetch_item_registry_activity_model_run_fetch_get) | **GET** /registry/activity/model_run/fetch | Fetch Item
-*ModelRunApi* | [**get_schema_registry_activity_model_run_schema_get**](docs/ModelRunApi.md#get_schema_registry_activity_model_run_schema_get) | **GET** /registry/activity/model_run/schema | Get Schema
-*ModelRunApi* | [**get_ui_schema_registry_activity_model_run_ui_schema_get**](docs/ModelRunApi.md#get_ui_schema_registry_activity_model_run_ui_schema_get) | **GET** /registry/activity/model_run/ui_schema | Get Ui Schema
-*ModelRunApi* | [**list_items_registry_activity_model_run_list_get**](docs/ModelRunApi.md#list_items_registry_activity_model_run_list_get) | **GET** /registry/activity/model_run/list | List Items
-*ModelRunApi* | [**seed_item_registry_activity_model_run_seed_post**](docs/ModelRunApi.md#seed_item_registry_activity_model_run_seed_post) | **POST** /registry/activity/model_run/seed | Seed Item
-*ModelRunApi* | [**update_item_registry_activity_model_run_update_put**](docs/ModelRunApi.md#update_item_registry_activity_model_run_update_put) | **PUT** /registry/activity/model_run/update | Update Item
-*ModelRunApi* | [**validate_registry_activity_model_run_validate_post**](docs/ModelRunApi.md#validate_registry_activity_model_run_validate_post) | **POST** /registry/activity/model_run/validate | Validate
-*ModelRunWorkflowDefinitionApi* | [**create_item_registry_entity_model_run_workflow_create_post**](docs/ModelRunWorkflowDefinitionApi.md#create_item_registry_entity_model_run_workflow_create_post) | **POST** /registry/entity/model_run_workflow/create | Create Item
-*ModelRunWorkflowDefinitionApi* | [**delete_item_registry_entity_model_run_workflow_delete_delete**](docs/ModelRunWorkflowDefinitionApi.md#delete_item_registry_entity_model_run_workflow_delete_delete) | **DELETE** /registry/entity/model_run_workflow/delete | Delete Item
-*ModelRunWorkflowDefinitionApi* | [**fetch_item_registry_entity_model_run_workflow_fetch_get**](docs/ModelRunWorkflowDefinitionApi.md#fetch_item_registry_entity_model_run_workflow_fetch_get) | **GET** /registry/entity/model_run_workflow/fetch | Fetch Item
-*ModelRunWorkflowDefinitionApi* | [**get_schema_registry_entity_model_run_workflow_schema_get**](docs/ModelRunWorkflowDefinitionApi.md#get_schema_registry_entity_model_run_workflow_schema_get) | **GET** /registry/entity/model_run_workflow/schema | Get Schema
-*ModelRunWorkflowDefinitionApi* | [**get_ui_schema_registry_entity_model_run_workflow_ui_schema_get**](docs/ModelRunWorkflowDefinitionApi.md#get_ui_schema_registry_entity_model_run_workflow_ui_schema_get) | **GET** /registry/entity/model_run_workflow/ui_schema | Get Ui Schema
-*ModelRunWorkflowDefinitionApi* | [**list_items_registry_entity_model_run_workflow_list_get**](docs/ModelRunWorkflowDefinitionApi.md#list_items_registry_entity_model_run_workflow_list_get) | **GET** /registry/entity/model_run_workflow/list | List Items
-*ModelRunWorkflowDefinitionApi* | [**seed_item_registry_entity_model_run_workflow_seed_post**](docs/ModelRunWorkflowDefinitionApi.md#seed_item_registry_entity_model_run_workflow_seed_post) | **POST** /registry/entity/model_run_workflow/seed | Seed Item
-*ModelRunWorkflowDefinitionApi* | [**update_item_registry_entity_model_run_workflow_update_put**](docs/ModelRunWorkflowDefinitionApi.md#update_item_registry_entity_model_run_workflow_update_put) | **PUT** /registry/entity/model_run_workflow/update | Update Item
-*ModelRunWorkflowDefinitionApi* | [**validate_registry_entity_model_run_workflow_validate_post**](docs/ModelRunWorkflowDefinitionApi.md#validate_registry_entity_model_run_workflow_validate_post) | **POST** /registry/entity/model_run_workflow/validate | Validate
-*OrganisationApi* | [**create_item_registry_agent_organisation_create_post**](docs/OrganisationApi.md#create_item_registry_agent_organisation_create_post) | **POST** /registry/agent/organisation/create | Create Item
-*OrganisationApi* | [**delete_item_registry_agent_organisation_delete_delete**](docs/OrganisationApi.md#delete_item_registry_agent_organisation_delete_delete) | **DELETE** /registry/agent/organisation/delete | Delete Item
-*OrganisationApi* | [**fetch_item_registry_agent_organisation_fetch_get**](docs/OrganisationApi.md#fetch_item_registry_agent_organisation_fetch_get) | **GET** /registry/agent/organisation/fetch | Fetch Item
-*OrganisationApi* | [**get_schema_registry_agent_organisation_schema_get**](docs/OrganisationApi.md#get_schema_registry_agent_organisation_schema_get) | **GET** /registry/agent/organisation/schema | Get Schema
-*OrganisationApi* | [**get_ui_schema_registry_agent_organisation_ui_schema_get**](docs/OrganisationApi.md#get_ui_schema_registry_agent_organisation_ui_schema_get) | **GET** /registry/agent/organisation/ui_schema | Get Ui Schema
-*OrganisationApi* | [**list_items_registry_agent_organisation_list_get**](docs/OrganisationApi.md#list_items_registry_agent_organisation_list_get) | **GET** /registry/agent/organisation/list | List Items
-*OrganisationApi* | [**seed_item_registry_agent_organisation_seed_post**](docs/OrganisationApi.md#seed_item_registry_agent_organisation_seed_post) | **POST** /registry/agent/organisation/seed | Seed Item
-*OrganisationApi* | [**update_item_registry_agent_organisation_update_put**](docs/OrganisationApi.md#update_item_registry_agent_organisation_update_put) | **PUT** /registry/agent/organisation/update | Update Item
-*OrganisationApi* | [**validate_registry_agent_organisation_validate_post**](docs/OrganisationApi.md#validate_registry_agent_organisation_validate_post) | **POST** /registry/agent/organisation/validate | Validate
-*PersonApi* | [**create_item_registry_agent_person_create_post**](docs/PersonApi.md#create_item_registry_agent_person_create_post) | **POST** /registry/agent/person/create | Create Item
-*PersonApi* | [**delete_item_registry_agent_person_delete_delete**](docs/PersonApi.md#delete_item_registry_agent_person_delete_delete) | **DELETE** /registry/agent/person/delete | Delete Item
-*PersonApi* | [**fetch_item_registry_agent_person_fetch_get**](docs/PersonApi.md#fetch_item_registry_agent_person_fetch_get) | **GET** /registry/agent/person/fetch | Fetch Item
-*PersonApi* | [**get_schema_registry_agent_person_schema_get**](docs/PersonApi.md#get_schema_registry_agent_person_schema_get) | **GET** /registry/agent/person/schema | Get Schema
-*PersonApi* | [**get_ui_schema_registry_agent_person_ui_schema_get**](docs/PersonApi.md#get_ui_schema_registry_agent_person_ui_schema_get) | **GET** /registry/agent/person/ui_schema | Get Ui Schema
-*PersonApi* | [**list_items_registry_agent_person_list_get**](docs/PersonApi.md#list_items_registry_agent_person_list_get) | **GET** /registry/agent/person/list | List Items
-*PersonApi* | [**seed_item_registry_agent_person_seed_post**](docs/PersonApi.md#seed_item_registry_agent_person_seed_post) | **POST** /registry/agent/person/seed | Seed Item
-*PersonApi* | [**update_item_registry_agent_person_update_put**](docs/PersonApi.md#update_item_registry_agent_person_update_put) | **PUT** /registry/agent/person/update | Update Item
-*PersonApi* | [**validate_registry_agent_person_validate_post**](docs/PersonApi.md#validate_registry_agent_person_validate_post) | **POST** /registry/agent/person/validate | Validate
-*DefaultApi* | [**root_get**](docs/DefaultApi.md#root_get) | **GET** / | Root
+*AccessCheckApi* | [**check_admin_access**](docs/AccessCheckApi.md#check_admin_access) | **GET** /check-access/check-admin-access | Check Admin Access
+*AccessCheckApi* | [**check_general_access**](docs/AccessCheckApi.md#check_general_access) | **GET** /check-access/check-general-access | Check General Access
+*AccessCheckApi* | [**check_read_access**](docs/AccessCheckApi.md#check_read_access) | **GET** /check-access/check-read-access | Check Read Access
+*AccessCheckApi* | [**check_write_access**](docs/AccessCheckApi.md#check_write_access) | **GET** /check-access/check-write-access | Check Write Access
+*DatasetTemplateApi* | [**create_entity_dataset_template**](docs/DatasetTemplateApi.md#create_entity_dataset_template) | **POST** /registry/entity/dataset_template/create | Create Item
+*DatasetTemplateApi* | [**delete_entity_dataset_template**](docs/DatasetTemplateApi.md#delete_entity_dataset_template) | **DELETE** /registry/entity/dataset_template/delete | Delete Item
+*DatasetTemplateApi* | [**fetch_entity_dataset_template**](docs/DatasetTemplateApi.md#fetch_entity_dataset_template) | **GET** /registry/entity/dataset_template/fetch | Fetch Item
+*DatasetTemplateApi* | [**list_entity_dataset_template**](docs/DatasetTemplateApi.md#list_entity_dataset_template) | **GET** /registry/entity/dataset_template/list | List Items
+*DatasetTemplateApi* | [**schema_entity_dataset_template**](docs/DatasetTemplateApi.md#schema_entity_dataset_template) | **GET** /registry/entity/dataset_template/schema | Get Schema
+*DatasetTemplateApi* | [**seed_entity_dataset_template**](docs/DatasetTemplateApi.md#seed_entity_dataset_template) | **POST** /registry/entity/dataset_template/seed | Seed Item
+*DatasetTemplateApi* | [**ui_schema_entity_dataset_template**](docs/DatasetTemplateApi.md#ui_schema_entity_dataset_template) | **GET** /registry/entity/dataset_template/ui_schema | Get Ui Schema
+*DatasetTemplateApi* | [**update_entity_dataset_template**](docs/DatasetTemplateApi.md#update_entity_dataset_template) | **PUT** /registry/entity/dataset_template/update | Update Item
+*DatasetTemplateApi* | [**validate_entity_dataset_template**](docs/DatasetTemplateApi.md#validate_entity_dataset_template) | **POST** /registry/entity/dataset_template/validate | Validate
+*GeneralRegistryApi* | [**fetch**](docs/GeneralRegistryApi.md#fetch) | **GET** /registry/general/fetch | Fetch Item
+*GeneralRegistryApi* | [**list**](docs/GeneralRegistryApi.md#list) | **POST** /registry/general/list | List Items
+*ModelApi* | [**create_entity_model**](docs/ModelApi.md#create_entity_model) | **POST** /registry/entity/model/create | Create Item
+*ModelApi* | [**delete_entity_model**](docs/ModelApi.md#delete_entity_model) | **DELETE** /registry/entity/model/delete | Delete Item
+*ModelApi* | [**fetch_entity_model**](docs/ModelApi.md#fetch_entity_model) | **GET** /registry/entity/model/fetch | Fetch Item
+*ModelApi* | [**list_entity_model**](docs/ModelApi.md#list_entity_model) | **GET** /registry/entity/model/list | List Items
+*ModelApi* | [**schema_entity_model**](docs/ModelApi.md#schema_entity_model) | **GET** /registry/entity/model/schema | Get Schema
+*ModelApi* | [**seed_entity_model**](docs/ModelApi.md#seed_entity_model) | **POST** /registry/entity/model/seed | Seed Item
+*ModelApi* | [**ui_schema_entity_model**](docs/ModelApi.md#ui_schema_entity_model) | **GET** /registry/entity/model/ui_schema | Get Ui Schema
+*ModelApi* | [**update_entity_model**](docs/ModelApi.md#update_entity_model) | **PUT** /registry/entity/model/update | Update Item
+*ModelApi* | [**validate_entity_model**](docs/ModelApi.md#validate_entity_model) | **POST** /registry/entity/model/validate | Validate
+*ModelRunApi* | [**create_activity_model_run**](docs/ModelRunApi.md#create_activity_model_run) | **POST** /registry/activity/model_run/create | Create Item
+*ModelRunApi* | [**delete_activity_model_run**](docs/ModelRunApi.md#delete_activity_model_run) | **DELETE** /registry/activity/model_run/delete | Delete Item
+*ModelRunApi* | [**fetch_activity_model_run**](docs/ModelRunApi.md#fetch_activity_model_run) | **GET** /registry/activity/model_run/fetch | Fetch Item
+*ModelRunApi* | [**list_activity_model_run**](docs/ModelRunApi.md#list_activity_model_run) | **GET** /registry/activity/model_run/list | List Items
+*ModelRunApi* | [**schema_activity_model_run**](docs/ModelRunApi.md#schema_activity_model_run) | **GET** /registry/activity/model_run/schema | Get Schema
+*ModelRunApi* | [**seed_activity_model_run**](docs/ModelRunApi.md#seed_activity_model_run) | **POST** /registry/activity/model_run/seed | Seed Item
+*ModelRunApi* | [**ui_schema_activity_model_run**](docs/ModelRunApi.md#ui_schema_activity_model_run) | **GET** /registry/activity/model_run/ui_schema | Get Ui Schema
+*ModelRunApi* | [**update_activity_model_run**](docs/ModelRunApi.md#update_activity_model_run) | **PUT** /registry/activity/model_run/update | Update Item
+*ModelRunApi* | [**validate_activity_model_run**](docs/ModelRunApi.md#validate_activity_model_run) | **POST** /registry/activity/model_run/validate | Validate
+*ModelRunWorkflowDefinitionApi* | [**create_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#create_entity_model_run_workflow_definition) | **POST** /registry/entity/model_run_workflow/create | Create Item
+*ModelRunWorkflowDefinitionApi* | [**delete_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#delete_entity_model_run_workflow_definition) | **DELETE** /registry/entity/model_run_workflow/delete | Delete Item
+*ModelRunWorkflowDefinitionApi* | [**fetch_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#fetch_entity_model_run_workflow_definition) | **GET** /registry/entity/model_run_workflow/fetch | Fetch Item
+*ModelRunWorkflowDefinitionApi* | [**list_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#list_entity_model_run_workflow_definition) | **GET** /registry/entity/model_run_workflow/list | List Items
+*ModelRunWorkflowDefinitionApi* | [**schema_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#schema_entity_model_run_workflow_definition) | **GET** /registry/entity/model_run_workflow/schema | Get Schema
+*ModelRunWorkflowDefinitionApi* | [**seed_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#seed_entity_model_run_workflow_definition) | **POST** /registry/entity/model_run_workflow/seed | Seed Item
+*ModelRunWorkflowDefinitionApi* | [**ui_schema_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#ui_schema_entity_model_run_workflow_definition) | **GET** /registry/entity/model_run_workflow/ui_schema | Get Ui Schema
+*ModelRunWorkflowDefinitionApi* | [**update_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#update_entity_model_run_workflow_definition) | **PUT** /registry/entity/model_run_workflow/update | Update Item
+*ModelRunWorkflowDefinitionApi* | [**validate_entity_model_run_workflow_definition**](docs/ModelRunWorkflowDefinitionApi.md#validate_entity_model_run_workflow_definition) | **POST** /registry/entity/model_run_workflow/validate | Validate
+*OrganisationApi* | [**create_agent_organisation**](docs/OrganisationApi.md#create_agent_organisation) | **POST** /registry/agent/organisation/create | Create Item
+*OrganisationApi* | [**delete_agent_organisation**](docs/OrganisationApi.md#delete_agent_organisation) | **DELETE** /registry/agent/organisation/delete | Delete Item
+*OrganisationApi* | [**fetch_agent_organisation**](docs/OrganisationApi.md#fetch_agent_organisation) | **GET** /registry/agent/organisation/fetch | Fetch Item
+*OrganisationApi* | [**list_agent_organisation**](docs/OrganisationApi.md#list_agent_organisation) | **GET** /registry/agent/organisation/list | List Items
+*OrganisationApi* | [**schema_agent_organisation**](docs/OrganisationApi.md#schema_agent_organisation) | **GET** /registry/agent/organisation/schema | Get Schema
+*OrganisationApi* | [**seed_agent_organisation**](docs/OrganisationApi.md#seed_agent_organisation) | **POST** /registry/agent/organisation/seed | Seed Item
+*OrganisationApi* | [**ui_schema_agent_organisation**](docs/OrganisationApi.md#ui_schema_agent_organisation) | **GET** /registry/agent/organisation/ui_schema | Get Ui Schema
+*OrganisationApi* | [**update_agent_organisation**](docs/OrganisationApi.md#update_agent_organisation) | **PUT** /registry/agent/organisation/update | Update Item
+*OrganisationApi* | [**validate_agent_organisation**](docs/OrganisationApi.md#validate_agent_organisation) | **POST** /registry/agent/organisation/validate | Validate
+*PersonApi* | [**create_agent_person**](docs/PersonApi.md#create_agent_person) | **POST** /registry/agent/person/create | Create Item
+*PersonApi* | [**delete_agent_person**](docs/PersonApi.md#delete_agent_person) | **DELETE** /registry/agent/person/delete | Delete Item
+*PersonApi* | [**fetch_agent_person**](docs/PersonApi.md#fetch_agent_person) | **GET** /registry/agent/person/fetch | Fetch Item
+*PersonApi* | [**list_agent_person**](docs/PersonApi.md#list_agent_person) | **GET** /registry/agent/person/list | List Items
+*PersonApi* | [**schema_agent_person**](docs/PersonApi.md#schema_agent_person) | **GET** /registry/agent/person/schema | Get Schema
+*PersonApi* | [**seed_agent_person**](docs/PersonApi.md#seed_agent_person) | **POST** /registry/agent/person/seed | Seed Item
+*PersonApi* | [**ui_schema_agent_person**](docs/PersonApi.md#ui_schema_agent_person) | **GET** /registry/agent/person/ui_schema | Get Ui Schema
+*PersonApi* | [**update_agent_person**](docs/PersonApi.md#update_agent_person) | **PUT** /registry/agent/person/update | Update Item
+*PersonApi* | [**validate_agent_person**](docs/PersonApi.md#validate_agent_person) | **POST** /registry/agent/person/validate | Validate
+*DefaultApi* | [**root**](docs/DefaultApi.md#root) | **GET** / | Root
 
 
 ## Documentation For Models

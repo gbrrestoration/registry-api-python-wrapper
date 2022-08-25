@@ -23,64 +23,64 @@ class TestModelRunApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_item_registry_activity_model_run_create_post(self):
-        """Test case for create_item_registry_activity_model_run_create_post
+    def test_create_activity_model_run(self):
+        """Test case for create_activity_model_run
 
         Create Item  # noqa: E501
         """
         pass
 
-    def test_delete_item_registry_activity_model_run_delete_delete(self):
-        """Test case for delete_item_registry_activity_model_run_delete_delete
+    def test_delete_activity_model_run(self):
+        """Test case for delete_activity_model_run
 
         Delete Item  # noqa: E501
         """
         pass
 
-    def test_fetch_item_registry_activity_model_run_fetch_get(self):
-        """Test case for fetch_item_registry_activity_model_run_fetch_get
+    def test_fetch_activity_model_run(self):
+        """Test case for fetch_activity_model_run
 
         Fetch Item  # noqa: E501
         """
         pass
 
-    def test_get_schema_registry_activity_model_run_schema_get(self):
-        """Test case for get_schema_registry_activity_model_run_schema_get
-
-        Get Schema  # noqa: E501
-        """
-        pass
-
-    def test_get_ui_schema_registry_activity_model_run_ui_schema_get(self):
-        """Test case for get_ui_schema_registry_activity_model_run_ui_schema_get
-
-        Get Ui Schema  # noqa: E501
-        """
-        pass
-
-    def test_list_items_registry_activity_model_run_list_get(self):
-        """Test case for list_items_registry_activity_model_run_list_get
+    def test_list_activity_model_run(self):
+        """Test case for list_activity_model_run
 
         List Items  # noqa: E501
         """
         pass
 
-    def test_seed_item_registry_activity_model_run_seed_post(self):
-        """Test case for seed_item_registry_activity_model_run_seed_post
+    def test_schema_activity_model_run(self):
+        """Test case for schema_activity_model_run
+
+        Get Schema  # noqa: E501
+        """
+        pass
+
+    def test_seed_activity_model_run(self):
+        """Test case for seed_activity_model_run
 
         Seed Item  # noqa: E501
         """
         pass
 
-    def test_update_item_registry_activity_model_run_update_put(self):
-        """Test case for update_item_registry_activity_model_run_update_put
+    def test_ui_schema_activity_model_run(self):
+        """Test case for ui_schema_activity_model_run
+
+        Get Ui Schema  # noqa: E501
+        """
+        pass
+
+    def test_update_activity_model_run(self):
+        """Test case for update_activity_model_run
 
         Update Item  # noqa: E501
         """
         pass
 
-    def test_validate_registry_activity_model_run_validate_post(self):
-        """Test case for validate_registry_activity_model_run_validate_post
+    def test_validate_activity_model_run(self):
+        """Test case for validate_activity_model_run
 
         Validate  # noqa: E501
         """
