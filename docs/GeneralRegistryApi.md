@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 List Items
 
-list_items Lists all items in the registry based on the provided query filter. The items in this method are not parsed in any way.  Arguments ----------  Returns -------  : UnparsedListResponse  The list of items and a total count, no parsing.  See Also (optional) --------  Examples (optional) --------
+list_items Lists all items in the registry based on the provided query filter. You can use the query_filter.record_type field to specify what kind of  records can be returned. By default, only COMPLETE record (non seed  records) are returned. The items in this method are not parsed in any way.  Arguments ----------  Returns -------  : UnparsedListResponse  The list of items and a total count, no parsing.  See Also (optional) --------  Examples (optional) --------
 
 ### Example
 
@@ -129,6 +129,7 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     query_filter = QueryFilter(
         item_category=ItemCategory("ACTIVITY"),
         item_subtype=ItemSubType("WORKFLOW_RUN"),
+        record_type=None,
     ) # QueryFilter | 
 
     # example passing only required values which don't have defaults set

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **created_timestamp** | **int** |  | 
 **updated_timestamp** | **int** |  | 
+**record_type** | [**RecordType**](RecordType.md) |  | 
 **version** | **str** |  | [optional] 
 **automation_schedule** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 **item_category** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 

@@ -91,6 +91,7 @@ class QueryFilter(ModelNormal):
         return {
             'item_category': (ItemCategory,),  # noqa: E501
             'item_subtype': (ItemSubType,),  # noqa: E501
+            'record_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -101,6 +102,7 @@ class QueryFilter(ModelNormal):
     attribute_map = {
         'item_category': 'item_category',  # noqa: E501
         'item_subtype': 'item_subtype',  # noqa: E501
+        'record_type': 'record_type',  # noqa: E501
     }
 
     read_only_vars = {
@@ -146,6 +148,7 @@ class QueryFilter(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_category (ItemCategory): [optional]  # noqa: E501
             item_subtype (ItemSubType): [optional]  # noqa: E501
+            record_type (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -233,6 +236,7 @@ class QueryFilter(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             item_category (ItemCategory): [optional]  # noqa: E501
             item_subtype (ItemSubType): [optional]  # noqa: E501
+            record_type (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

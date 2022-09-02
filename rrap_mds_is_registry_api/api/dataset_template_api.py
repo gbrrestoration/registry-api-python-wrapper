@@ -27,7 +27,7 @@ from rrap_mds_is_registry_api.model.dataset_template_fetch_response import Datas
 from rrap_mds_is_registry_api.model.dataset_template_list_response import DatasetTemplateListResponse
 from rrap_mds_is_registry_api.model.dataset_template_seed_response import DatasetTemplateSeedResponse
 from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
-from rrap_mds_is_registry_api.model.schema_response import SchemaResponse
+from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 from rrap_mds_is_registry_api.model.status_response import StatusResponse
 from rrap_mds_is_registry_api.model.ui_schema_response import UiSchemaResponse
 
@@ -248,7 +248,7 @@ class DatasetTemplateApi(object):
         )
         self.schema_entity_dataset_template_endpoint = _Endpoint(
             settings={
-                'response_type': (SchemaResponse,),
+                'response_type': (JsonSchemaResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
@@ -823,7 +823,7 @@ class DatasetTemplateApi(object):
     ):
         """Get Schema  # noqa: E501
 
-        get_schema Returns the auto generated pydantic model  json schema. This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
+        get_schema Returns the auto generated pydantic model  json schema.   This method uses only the domain info component of the item to ensure compliance with update and create endpoints.   This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -864,7 +864,7 @@ class DatasetTemplateApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SchemaResponse
+            JsonSchemaResponse
                 If the method is called asynchronously, returns the request
                 thread.
         """

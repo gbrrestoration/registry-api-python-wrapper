@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.record_type import RecordType
+globals()['RecordType'] = RecordType
 from rrap_mds_is_registry_api.model.item_model import ItemModel
 
 

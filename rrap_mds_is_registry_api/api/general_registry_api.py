@@ -231,7 +231,7 @@ class GeneralRegistryApi(object):
     ):
         """List Items  # noqa: E501
 
-        list_items Lists all items in the registry based on the provided query filter. The items in this method are not parsed in any way.  Arguments ----------  Returns -------  : UnparsedListResponse  The list of items and a total count, no parsing.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
+        list_items Lists all items in the registry based on the provided query filter. You can use the query_filter.record_type field to specify what kind of  records can be returned. By default, only COMPLETE record (non seed  records) are returned. The items in this method are not parsed in any way.  Arguments ----------  Returns -------  : UnparsedListResponse  The list of items and a total count, no parsing.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

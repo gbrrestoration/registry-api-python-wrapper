@@ -32,8 +32,10 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 def lazy_import():
     from rrap_mds_is_registry_api.model.item_category import ItemCategory
     from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+    from rrap_mds_is_registry_api.model.record_type import RecordType
     globals()['ItemCategory'] = ItemCategory
     globals()['ItemSubType'] = ItemSubType
+    globals()['RecordType'] = RecordType
 
 
 class SeededItem(ModelNormal):
@@ -94,6 +96,7 @@ class SeededItem(ModelNormal):
             'updated_timestamp': (int,),  # noqa: E501
             'item_category': (ItemCategory,),  # noqa: E501
             'item_subtype': (ItemSubType,),  # noqa: E501
+            'record_type': (RecordType,),  # noqa: E501
         }
 
     @cached_property
@@ -107,6 +110,7 @@ class SeededItem(ModelNormal):
         'updated_timestamp': 'updated_timestamp',  # noqa: E501
         'item_category': 'item_category',  # noqa: E501
         'item_subtype': 'item_subtype',  # noqa: E501
+        'record_type': 'record_type',  # noqa: E501
     }
 
     read_only_vars = {
@@ -116,7 +120,7 @@ class SeededItem(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_timestamp, updated_timestamp, item_category, item_subtype, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_timestamp, updated_timestamp, item_category, item_subtype, record_type, *args, **kwargs):  # noqa: E501
         """SeededItem - a model defined in OpenAPI
 
         Args:
@@ -125,6 +129,7 @@ class SeededItem(ModelNormal):
             updated_timestamp (int):
             item_category (ItemCategory):
             item_subtype (ItemSubType):
+            record_type (RecordType):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -193,6 +198,7 @@ class SeededItem(ModelNormal):
         self.updated_timestamp = updated_timestamp
         self.item_category = item_category
         self.item_subtype = item_subtype
+        self.record_type = record_type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -213,7 +219,7 @@ class SeededItem(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, created_timestamp, updated_timestamp, item_category, item_subtype, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, created_timestamp, updated_timestamp, item_category, item_subtype, record_type, *args, **kwargs):  # noqa: E501
         """SeededItem - a model defined in OpenAPI
 
         Args:
@@ -222,6 +228,7 @@ class SeededItem(ModelNormal):
             updated_timestamp (int):
             item_category (ItemCategory):
             item_subtype (ItemSubType):
+            record_type (RecordType):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -288,6 +295,7 @@ class SeededItem(ModelNormal):
         self.updated_timestamp = updated_timestamp
         self.item_category = item_category
         self.item_subtype = item_subtype
+        self.record_type = record_type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

@@ -22,12 +22,12 @@ from rrap_mds_is_registry_api.model_utils import (  # noqa: F401
     validate_and_convert_types
 )
 from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 from rrap_mds_is_registry_api.model.model_run_workflow_definition_create_response import ModelRunWorkflowDefinitionCreateResponse
 from rrap_mds_is_registry_api.model.model_run_workflow_definition_domain_info import ModelRunWorkflowDefinitionDomainInfo
 from rrap_mds_is_registry_api.model.model_run_workflow_definition_fetch_response import ModelRunWorkflowDefinitionFetchResponse
 from rrap_mds_is_registry_api.model.model_run_workflow_definition_list_response import ModelRunWorkflowDefinitionListResponse
 from rrap_mds_is_registry_api.model.model_run_workflow_definition_seed_response import ModelRunWorkflowDefinitionSeedResponse
-from rrap_mds_is_registry_api.model.schema_response import SchemaResponse
 from rrap_mds_is_registry_api.model.status_response import StatusResponse
 from rrap_mds_is_registry_api.model.ui_schema_response import UiSchemaResponse
 
@@ -248,7 +248,7 @@ class ModelRunWorkflowDefinitionApi(object):
         )
         self.schema_entity_model_run_workflow_definition_endpoint = _Endpoint(
             settings={
-                'response_type': (SchemaResponse,),
+                'response_type': (JsonSchemaResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
@@ -823,7 +823,7 @@ class ModelRunWorkflowDefinitionApi(object):
     ):
         """Get Schema  # noqa: E501
 
-        get_schema Returns the auto generated pydantic model  json schema. This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
+        get_schema Returns the auto generated pydantic model  json schema.   This method uses only the domain info component of the item to ensure compliance with update and create endpoints.   This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -864,7 +864,7 @@ class ModelRunWorkflowDefinitionApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SchemaResponse
+            JsonSchemaResponse
                 If the method is called asynchronously, returns the request
                 thread.
         """

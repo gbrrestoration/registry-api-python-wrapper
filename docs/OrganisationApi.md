@@ -346,11 +346,11 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schema_agent_organisation**
-> SchemaResponse schema_agent_organisation()
+> JsonSchemaResponse schema_agent_organisation()
 
 Get Schema
 
-get_schema Returns the auto generated pydantic model  json schema. This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------
+get_schema Returns the auto generated pydantic model  json schema.   This method uses only the domain info component of the item to ensure compliance with update and create endpoints.   This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------
 
 ### Example
 
@@ -360,7 +360,7 @@ get_schema Returns the auto generated pydantic model  json schema. This can be u
 import time
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.api import organisation_api
-from rrap_mds_is_registry_api.model.schema_response import SchemaResponse
+from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -399,7 +399,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SchemaResponse**](SchemaResponse.md)
+[**JsonSchemaResponse**](JsonSchemaResponse.md)
 
 ### Authorization
 

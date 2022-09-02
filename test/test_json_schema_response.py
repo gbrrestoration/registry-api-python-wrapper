@@ -12,13 +12,13 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.record_type import RecordType
-globals()['RecordType'] = RecordType
-from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
+from rrap_mds_is_registry_api.model.status import Status
+globals()['Status'] = Status
+from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 
 
-class TestItemOrganisation(unittest.TestCase):
-    """ItemOrganisation unit test stubs"""
+class TestJsonSchemaResponse(unittest.TestCase):
+    """JsonSchemaResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,10 +26,10 @@ class TestItemOrganisation(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testItemOrganisation(self):
-        """Test ItemOrganisation"""
+    def testJsonSchemaResponse(self):
+        """Test JsonSchemaResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ItemOrganisation()  # noqa: E501
+        # model = JsonSchemaResponse()  # noqa: E501
         pass
 
 

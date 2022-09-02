@@ -13,8 +13,10 @@ import unittest
 
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.model.model_run_record import ModelRunRecord
+from rrap_mds_is_registry_api.model.record_type import RecordType
 from rrap_mds_is_registry_api.model.workflow_run_completion_status import WorkflowRunCompletionStatus
 globals()['ModelRunRecord'] = ModelRunRecord
+globals()['RecordType'] = RecordType
 globals()['WorkflowRunCompletionStatus'] = WorkflowRunCompletionStatus
 from rrap_mds_is_registry_api.model.item_model_run import ItemModelRun
 

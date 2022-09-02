@@ -22,12 +22,12 @@ from rrap_mds_is_registry_api.model_utils import (  # noqa: F401
     validate_and_convert_types
 )
 from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 from rrap_mds_is_registry_api.model.model_run_create_response import ModelRunCreateResponse
 from rrap_mds_is_registry_api.model.model_run_domain_info import ModelRunDomainInfo
 from rrap_mds_is_registry_api.model.model_run_fetch_response import ModelRunFetchResponse
 from rrap_mds_is_registry_api.model.model_run_list_response import ModelRunListResponse
 from rrap_mds_is_registry_api.model.model_run_seed_response import ModelRunSeedResponse
-from rrap_mds_is_registry_api.model.schema_response import SchemaResponse
 from rrap_mds_is_registry_api.model.status_response import StatusResponse
 from rrap_mds_is_registry_api.model.ui_schema_response import UiSchemaResponse
 
@@ -248,7 +248,7 @@ class ModelRunApi(object):
         )
         self.schema_activity_model_run_endpoint = _Endpoint(
             settings={
-                'response_type': (SchemaResponse,),
+                'response_type': (JsonSchemaResponse,),
                 'auth': [
                     'OAuth2PasswordBearer'
                 ],
@@ -823,7 +823,7 @@ class ModelRunApi(object):
     ):
         """Get Schema  # noqa: E501
 
-        get_schema Returns the auto generated pydantic model  json schema. This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
+        get_schema Returns the auto generated pydantic model  json schema.   This method uses only the domain info component of the item to ensure compliance with update and create endpoints.   This can be used to programmatically generate input forms, or to validate against the  pydantic model. You can also use the /validate  endpoint.  Arguments ----------  Returns -------  : SchemaResponse     Response with a json schema object.  See Also (optional) --------  Examples (optional) --------  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -864,7 +864,7 @@ class ModelRunApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            SchemaResponse
+            JsonSchemaResponse
                 If the method is called asynchronously, returns the request
                 thread.
         """

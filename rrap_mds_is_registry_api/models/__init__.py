@@ -41,6 +41,7 @@ from rrap_mds_is_registry_api.model.item_model_run_workflow_definition import It
 from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
 from rrap_mds_is_registry_api.model.item_person import ItemPerson
 from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 from rrap_mds_is_registry_api.model.location_inner import LocationInner
 from rrap_mds_is_registry_api.model.model_create_response import ModelCreateResponse
 from rrap_mds_is_registry_api.model.model_domain_info import ModelDomainInfo
@@ -73,7 +74,8 @@ from rrap_mds_is_registry_api.model.person_fetch_response import PersonFetchResp
 from rrap_mds_is_registry_api.model.person_list_response import PersonListResponse
 from rrap_mds_is_registry_api.model.person_seed_response import PersonSeedResponse
 from rrap_mds_is_registry_api.model.query_filter import QueryFilter
-from rrap_mds_is_registry_api.model.schema_response import SchemaResponse
+from rrap_mds_is_registry_api.model.query_record_types import QueryRecordTypes
+from rrap_mds_is_registry_api.model.record_type import RecordType
 from rrap_mds_is_registry_api.model.seeded_item import SeededItem
 from rrap_mds_is_registry_api.model.status import Status
 from rrap_mds_is_registry_api.model.status_response import StatusResponse

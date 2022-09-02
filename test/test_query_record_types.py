@@ -12,13 +12,11 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.record_type import RecordType
-globals()['RecordType'] = RecordType
-from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
+from rrap_mds_is_registry_api.model.query_record_types import QueryRecordTypes
 
 
-class TestItemOrganisation(unittest.TestCase):
-    """ItemOrganisation unit test stubs"""
+class TestQueryRecordTypes(unittest.TestCase):
+    """QueryRecordTypes unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,10 +24,10 @@ class TestItemOrganisation(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testItemOrganisation(self):
-        """Test ItemOrganisation"""
+    def testQueryRecordTypes(self):
+        """Test QueryRecordTypes"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ItemOrganisation()  # noqa: E501
+        # model = QueryRecordTypes()  # noqa: E501
         pass
 
 

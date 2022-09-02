@@ -33,10 +33,12 @@ def lazy_import():
     from rrap_mds_is_registry_api.model.item_category import ItemCategory
     from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
     from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+    from rrap_mds_is_registry_api.model.record_type import RecordType
     from rrap_mds_is_registry_api.model.seeded_item import SeededItem
     globals()['ItemCategory'] = ItemCategory
     globals()['ItemOrganisation'] = ItemOrganisation
     globals()['ItemSubType'] = ItemSubType
+    globals()['RecordType'] = RecordType
     globals()['SeededItem'] = SeededItem
 
 
@@ -105,6 +107,7 @@ class Item4(ModelComposed):
             'updated_timestamp': (int,),  # noqa: E501
             'item_category': (ItemCategory,),  # noqa: E501
             'item_subtype': (ItemSubType,),  # noqa: E501
+            'record_type': (RecordType,),  # noqa: E501
         }
 
     @cached_property
@@ -121,6 +124,7 @@ class Item4(ModelComposed):
         'updated_timestamp': 'updated_timestamp',  # noqa: E501
         'item_category': 'item_category',  # noqa: E501
         'item_subtype': 'item_subtype',  # noqa: E501
+        'record_type': 'record_type',  # noqa: E501
     }
 
     read_only_vars = {
@@ -170,6 +174,7 @@ class Item4(ModelComposed):
             updated_timestamp (int): [optional]  # noqa: E501
             item_category (ItemCategory): [optional]  # noqa: E501
             item_subtype (ItemSubType): [optional]  # noqa: E501
+            record_type (RecordType): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -281,6 +286,7 @@ class Item4(ModelComposed):
             updated_timestamp (int): [optional]  # noqa: E501
             item_category (ItemCategory): [optional]  # noqa: E501
             item_subtype (ItemSubType): [optional]  # noqa: E501
+            record_type (RecordType): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -33,9 +33,11 @@ def lazy_import():
     from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
     from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
     from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
+    from rrap_mds_is_registry_api.model.record_type import RecordType
     globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
     globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
     globals()['DatasetUsageInformation'] = DatasetUsageInformation
+    globals()['RecordType'] = RecordType
 
 
 class ItemDatasetTemplate(ModelNormal):
@@ -96,6 +98,7 @@ class ItemDatasetTemplate(ModelNormal):
             'id': (str,),  # noqa: E501
             'created_timestamp': (int,),  # noqa: E501
             'updated_timestamp': (int,),  # noqa: E501
+            'record_type': (RecordType,),  # noqa: E501
             'structural_template': (DatasetStructuralTemplate,),  # noqa: E501
             'spatial_information': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
             'temporal_information': (DatasetTemporalInformation,),  # noqa: E501
@@ -114,6 +117,7 @@ class ItemDatasetTemplate(ModelNormal):
         'id': 'id',  # noqa: E501
         'created_timestamp': 'created_timestamp',  # noqa: E501
         'updated_timestamp': 'updated_timestamp',  # noqa: E501
+        'record_type': 'record_type',  # noqa: E501
         'structural_template': 'structural_template',  # noqa: E501
         'spatial_information': 'spatial_information',  # noqa: E501
         'temporal_information': 'temporal_information',  # noqa: E501
@@ -128,7 +132,7 @@ class ItemDatasetTemplate(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, display_name, usage_information, id, created_timestamp, updated_timestamp, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, display_name, usage_information, id, created_timestamp, updated_timestamp, record_type, *args, **kwargs):  # noqa: E501
         """ItemDatasetTemplate - a model defined in OpenAPI
 
         Args:
@@ -137,6 +141,7 @@ class ItemDatasetTemplate(ModelNormal):
             id (str):
             created_timestamp (int):
             updated_timestamp (int):
+            record_type (RecordType):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -210,6 +215,7 @@ class ItemDatasetTemplate(ModelNormal):
         self.id = id
         self.created_timestamp = created_timestamp
         self.updated_timestamp = updated_timestamp
+        self.record_type = record_type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -230,7 +236,7 @@ class ItemDatasetTemplate(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, display_name, usage_information, id, created_timestamp, updated_timestamp, *args, **kwargs):  # noqa: E501
+    def __init__(self, display_name, usage_information, id, created_timestamp, updated_timestamp, record_type, *args, **kwargs):  # noqa: E501
         """ItemDatasetTemplate - a model defined in OpenAPI
 
         Args:
@@ -239,6 +245,7 @@ class ItemDatasetTemplate(ModelNormal):
             id (str):
             created_timestamp (int):
             updated_timestamp (int):
+            record_type (RecordType):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -310,6 +317,7 @@ class ItemDatasetTemplate(ModelNormal):
         self.id = id
         self.created_timestamp = created_timestamp
         self.updated_timestamp = updated_timestamp
+        self.record_type = record_type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

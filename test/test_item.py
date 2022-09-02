@@ -18,6 +18,7 @@ from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsag
 from rrap_mds_is_registry_api.model.item_category import ItemCategory
 from rrap_mds_is_registry_api.model.item_dataset_template import ItemDatasetTemplate
 from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+from rrap_mds_is_registry_api.model.record_type import RecordType
 from rrap_mds_is_registry_api.model.seeded_item import SeededItem
 globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
 globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
@@ -25,6 +26,7 @@ globals()['DatasetUsageInformation'] = DatasetUsageInformation
 globals()['ItemCategory'] = ItemCategory
 globals()['ItemDatasetTemplate'] = ItemDatasetTemplate
 globals()['ItemSubType'] = ItemSubType
+globals()['RecordType'] = RecordType
 globals()['SeededItem'] = SeededItem
 from rrap_mds_is_registry_api.model.item import Item
 

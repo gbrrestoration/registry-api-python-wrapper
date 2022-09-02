@@ -31,8 +31,10 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 def lazy_import():
     from rrap_mds_is_registry_api.model.model_run_record import ModelRunRecord
+    from rrap_mds_is_registry_api.model.record_type import RecordType
     from rrap_mds_is_registry_api.model.workflow_run_completion_status import WorkflowRunCompletionStatus
     globals()['ModelRunRecord'] = ModelRunRecord
+    globals()['RecordType'] = RecordType
     globals()['WorkflowRunCompletionStatus'] = WorkflowRunCompletionStatus
 
 
@@ -96,6 +98,7 @@ class ItemModelRun(ModelNormal):
             'id': (str,),  # noqa: E501
             'created_timestamp': (int,),  # noqa: E501
             'updated_timestamp': (int,),  # noqa: E501
+            'record_type': (RecordType,),  # noqa: E501
             'item_category': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'item_subtype': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
@@ -113,6 +116,7 @@ class ItemModelRun(ModelNormal):
         'id': 'id',  # noqa: E501
         'created_timestamp': 'created_timestamp',  # noqa: E501
         'updated_timestamp': 'updated_timestamp',  # noqa: E501
+        'record_type': 'record_type',  # noqa: E501
         'item_category': 'item_category',  # noqa: E501
         'item_subtype': 'item_subtype',  # noqa: E501
     }
@@ -124,7 +128,7 @@ class ItemModelRun(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, display_name, record_status, record, prov_serialisation, id, created_timestamp, updated_timestamp, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, display_name, record_status, record, prov_serialisation, id, created_timestamp, updated_timestamp, record_type, *args, **kwargs):  # noqa: E501
         """ItemModelRun - a model defined in OpenAPI
 
         Args:
@@ -135,6 +139,7 @@ class ItemModelRun(ModelNormal):
             id (str):
             created_timestamp (int):
             updated_timestamp (int):
+            record_type (RecordType):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -207,6 +212,7 @@ class ItemModelRun(ModelNormal):
         self.id = id
         self.created_timestamp = created_timestamp
         self.updated_timestamp = updated_timestamp
+        self.record_type = record_type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -227,7 +233,7 @@ class ItemModelRun(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, display_name, record_status, record, prov_serialisation, id, created_timestamp, updated_timestamp, *args, **kwargs):  # noqa: E501
+    def __init__(self, display_name, record_status, record, prov_serialisation, id, created_timestamp, updated_timestamp, record_type, *args, **kwargs):  # noqa: E501
         """ItemModelRun - a model defined in OpenAPI
 
         Args:
@@ -238,6 +244,7 @@ class ItemModelRun(ModelNormal):
             id (str):
             created_timestamp (int):
             updated_timestamp (int):
+            record_type (RecordType):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -308,6 +315,7 @@ class ItemModelRun(ModelNormal):
         self.id = id
         self.created_timestamp = created_timestamp
         self.updated_timestamp = updated_timestamp
+        self.record_type = record_type
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

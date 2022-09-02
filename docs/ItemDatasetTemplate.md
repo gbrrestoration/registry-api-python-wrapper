@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **created_timestamp** | **int** |  | 
 **updated_timestamp** | **int** |  | 
+**record_type** | [**RecordType**](RecordType.md) |  | 
 **structural_template** | [**DatasetStructuralTemplate**](DatasetStructuralTemplate.md) |  | [optional] 
 **spatial_information** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 **temporal_information** | [**DatasetTemporalInformation**](DatasetTemporalInformation.md) |  | [optional] 

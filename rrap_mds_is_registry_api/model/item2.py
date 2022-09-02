@@ -34,12 +34,14 @@ def lazy_import():
     from rrap_mds_is_registry_api.model.item_model_run import ItemModelRun
     from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
     from rrap_mds_is_registry_api.model.model_run_record import ModelRunRecord
+    from rrap_mds_is_registry_api.model.record_type import RecordType
     from rrap_mds_is_registry_api.model.seeded_item import SeededItem
     from rrap_mds_is_registry_api.model.workflow_run_completion_status import WorkflowRunCompletionStatus
     globals()['ItemCategory'] = ItemCategory
     globals()['ItemModelRun'] = ItemModelRun
     globals()['ItemSubType'] = ItemSubType
     globals()['ModelRunRecord'] = ModelRunRecord
+    globals()['RecordType'] = RecordType
     globals()['SeededItem'] = SeededItem
     globals()['WorkflowRunCompletionStatus'] = WorkflowRunCompletionStatus
 
@@ -106,6 +108,7 @@ class Item2(ModelComposed):
             'updated_timestamp': (int,),  # noqa: E501
             'item_category': (ItemCategory,),  # noqa: E501
             'item_subtype': (ItemSubType,),  # noqa: E501
+            'record_type': (RecordType,),  # noqa: E501
         }
 
     @cached_property
@@ -123,6 +126,7 @@ class Item2(ModelComposed):
         'updated_timestamp': 'updated_timestamp',  # noqa: E501
         'item_category': 'item_category',  # noqa: E501
         'item_subtype': 'item_subtype',  # noqa: E501
+        'record_type': 'record_type',  # noqa: E501
     }
 
     read_only_vars = {
@@ -173,6 +177,7 @@ class Item2(ModelComposed):
             updated_timestamp (int): [optional]  # noqa: E501
             item_category (ItemCategory): [optional]  # noqa: E501
             item_subtype (ItemSubType): [optional]  # noqa: E501
+            record_type (RecordType): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -285,6 +290,7 @@ class Item2(ModelComposed):
             updated_timestamp (int): [optional]  # noqa: E501
             item_category (ItemCategory): [optional]  # noqa: E501
             item_subtype (ItemSubType): [optional]  # noqa: E501
+            record_type (RecordType): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
