@@ -61,41 +61,9 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
             usage_type=DatasetUsageType("PARAMETER_FILE"),
             usage_description="usage_description_example",
         ),
-        structural_template=DatasetStructuralTemplate(
-            additional_description="additional_description_example",
-            file_information=[
-                FileInformation(
-                    folder=True,
-                    usage=DatasetUsageInformation(
-                        usage_type=DatasetUsageType("PARAMETER_FILE"),
-                        usage_description="usage_description_example",
-                    ),
-                    path="path_example",
-                    extension="extension_example",
-                    description="description_example",
-                    parameters=[
-                        DatasetParameter(
-                            parameter_name="parameter_name_example",
-                            column_name="column_name_example",
-                            column_index=1,
-                            description="description_example",
-                            vocabulary_id="vocabulary_id_example",
-                        ),
-                    ],
-                    size_estimate=1,
-                    size_min=1,
-                    size_max=1,
-                    enforce_size_constraints=False,
-                    enforce_constraints=False,
-                ),
-            ],
-        ),
-        spatial_information={},
-        temporal_information=DatasetTemporalInformation(
-            start_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            end_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            interval=3.14,
-        ),
+        structural_template=StructuralTemplate(None),
+        spatial_information=SpatialInformation(None),
+        temporal_information=TemporalInformation(None),
     ) # DatasetTemplateDomainInfo | 
 
     # example passing only required values which don't have defaults set
@@ -323,6 +291,7 @@ list_items Lists all items of the specified type (by route). Sorts items  into p
 import time
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.api import dataset_template_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
 from rrap_mds_is_registry_api.model.dataset_template_list_response import DatasetTemplateListResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -346,11 +315,13 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = dataset_template_api.DatasetTemplateApi(api_client)
+    record_type = None # bool, date, datetime, dict, float, int, list, str, none_type |  (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # List Items
-        api_response = api_instance.list_entity_dataset_template()
+        api_response = api_instance.list_entity_dataset_template(record_type=record_type)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling DatasetTemplateApi->list_entity_dataset_template: %s\n" % e)
@@ -358,7 +329,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **record_type** | **bool, date, datetime, dict, float, int, list, str, none_type**|  | [optional]
 
 ### Return type
 
@@ -379,6 +353,7 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -651,41 +626,9 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
             usage_type=DatasetUsageType("PARAMETER_FILE"),
             usage_description="usage_description_example",
         ),
-        structural_template=DatasetStructuralTemplate(
-            additional_description="additional_description_example",
-            file_information=[
-                FileInformation(
-                    folder=True,
-                    usage=DatasetUsageInformation(
-                        usage_type=DatasetUsageType("PARAMETER_FILE"),
-                        usage_description="usage_description_example",
-                    ),
-                    path="path_example",
-                    extension="extension_example",
-                    description="description_example",
-                    parameters=[
-                        DatasetParameter(
-                            parameter_name="parameter_name_example",
-                            column_name="column_name_example",
-                            column_index=1,
-                            description="description_example",
-                            vocabulary_id="vocabulary_id_example",
-                        ),
-                    ],
-                    size_estimate=1,
-                    size_min=1,
-                    size_max=1,
-                    enforce_size_constraints=False,
-                    enforce_constraints=False,
-                ),
-            ],
-        ),
-        spatial_information={},
-        temporal_information=DatasetTemporalInformation(
-            start_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            end_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            interval=3.14,
-        ),
+        structural_template=StructuralTemplate(None),
+        spatial_information=SpatialInformation(None),
+        temporal_information=TemporalInformation(None),
     ) # DatasetTemplateDomainInfo | 
 
     # example passing only required values which don't have defaults set
@@ -774,41 +717,9 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
             usage_type=DatasetUsageType("PARAMETER_FILE"),
             usage_description="usage_description_example",
         ),
-        structural_template=DatasetStructuralTemplate(
-            additional_description="additional_description_example",
-            file_information=[
-                FileInformation(
-                    folder=True,
-                    usage=DatasetUsageInformation(
-                        usage_type=DatasetUsageType("PARAMETER_FILE"),
-                        usage_description="usage_description_example",
-                    ),
-                    path="path_example",
-                    extension="extension_example",
-                    description="description_example",
-                    parameters=[
-                        DatasetParameter(
-                            parameter_name="parameter_name_example",
-                            column_name="column_name_example",
-                            column_index=1,
-                            description="description_example",
-                            vocabulary_id="vocabulary_id_example",
-                        ),
-                    ],
-                    size_estimate=1,
-                    size_min=1,
-                    size_max=1,
-                    enforce_size_constraints=False,
-                    enforce_constraints=False,
-                ),
-            ],
-        ),
-        spatial_information={},
-        temporal_information=DatasetTemporalInformation(
-            start_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            end_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            interval=3.14,
-        ),
+        structural_template=StructuralTemplate(None),
+        spatial_information=SpatialInformation(None),
+        temporal_information=TemporalInformation(None),
     ) # DatasetTemplateDomainInfo | 
 
     # example passing only required values which don't have defaults set

@@ -30,10 +30,10 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.item_category import ItemCategory
-    from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
-    globals()['ItemCategory'] = ItemCategory
-    globals()['ItemSubType'] = ItemSubType
+    from rrap_mds_is_registry_api.model.query_filter_item_category import QueryFilterItemCategory
+    from rrap_mds_is_registry_api.model.query_filter_item_subtype import QueryFilterItemSubtype
+    globals()['QueryFilterItemCategory'] = QueryFilterItemCategory
+    globals()['QueryFilterItemSubtype'] = QueryFilterItemSubtype
 
 
 class QueryFilter(ModelNormal):
@@ -89,8 +89,8 @@ class QueryFilter(ModelNormal):
         """
         lazy_import()
         return {
-            'item_category': (ItemCategory,),  # noqa: E501
-            'item_subtype': (ItemSubType,),  # noqa: E501
+            'item_category': (QueryFilterItemCategory,),  # noqa: E501
+            'item_subtype': (QueryFilterItemSubtype,),  # noqa: E501
             'record_type': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
@@ -146,8 +146,8 @@ class QueryFilter(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_category (ItemCategory): [optional]  # noqa: E501
-            item_subtype (ItemSubType): [optional]  # noqa: E501
+            item_category (QueryFilterItemCategory): [optional]  # noqa: E501
+            item_subtype (QueryFilterItemSubtype): [optional]  # noqa: E501
             record_type (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
@@ -234,8 +234,8 @@ class QueryFilter(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item_category (ItemCategory): [optional]  # noqa: E501
-            item_subtype (ItemSubType): [optional]  # noqa: E501
+            item_category (QueryFilterItemCategory): [optional]  # noqa: E501
+            item_subtype (QueryFilterItemSubtype): [optional]  # noqa: E501
             record_type (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 

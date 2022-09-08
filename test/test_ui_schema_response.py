@@ -13,7 +13,9 @@ import unittest
 
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.model.status import Status
+from rrap_mds_is_registry_api.model.ui_schema import UiSchema
 globals()['Status'] = Status
+globals()['UiSchema'] = UiSchema
 from rrap_mds_is_registry_api.model.ui_schema_response import UiSchemaResponse
 
 

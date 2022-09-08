@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.credentials import Credentials
+globals()['Credentials'] = Credentials
 from rrap_mds_is_registry_api.model.url_dataset_resource import URLDatasetResource
 
 

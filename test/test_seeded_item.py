@@ -12,12 +12,22 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.item_category import ItemCategory
-from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
-from rrap_mds_is_registry_api.model.record_type import RecordType
-globals()['ItemCategory'] = ItemCategory
-globals()['ItemSubType'] = ItemSubType
-globals()['RecordType'] = RecordType
+from rrap_mds_is_registry_api.model.from_rrap_mds_is_registry_api_model_item_category_import_item_category import FromRrapMdsIsRegistryApiModelItemCategoryImportItemCategory
+from rrap_mds_is_registry_api.model.from_rrap_mds_is_registry_api_model_item_sub_type_import_item_sub_type import FromRrapMdsIsRegistryApiModelItemSubTypeImportItemSubType
+from rrap_mds_is_registry_api.model.from_rrap_mds_is_registry_api_model_record_type_import_record_type import FromRrapMdsIsRegistryApiModelRecordTypeImportRecordType
+from rrap_mds_is_registry_api.model.from_rrap_mds_is_registry_api_model_seeded_item_import_seeded_item import FromRrapMdsIsRegistryApiModelSeededItemImportSeededItem
+from rrap_mds_is_registry_api.model.globals_item_category_item_category import GlobalsItemCategoryItemCategory
+from rrap_mds_is_registry_api.model.globals_item_sub_type_item_sub_type import GlobalsItemSubTypeItemSubType
+from rrap_mds_is_registry_api.model.globals_record_type_record_type import GlobalsRecordTypeRecordType
+from rrap_mds_is_registry_api.model.globals_seeded_item_seeded_item import GlobalsSeededItemSeededItem
+globals()['from rrap_mds_is_registry_api.model.item_category import ItemCategory'] = from rrap_mds_is_registry_api.model.item_category import ItemCategory
+globals()['from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType'] = from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+globals()['from rrap_mds_is_registry_api.model.record_type import RecordType'] = from rrap_mds_is_registry_api.model.record_type import RecordType
+globals()['from rrap_mds_is_registry_api.model.seeded_item import SeededItem'] = from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+globals()['globals()['ItemCategory'] = ItemCategory'] = globals()['ItemCategory'] = ItemCategory
+globals()['globals()['ItemSubType'] = ItemSubType'] = globals()['ItemSubType'] = ItemSubType
+globals()['globals()['RecordType'] = RecordType'] = globals()['RecordType'] = RecordType
+globals()['globals()['SeededItem'] = SeededItem'] = globals()['SeededItem'] = SeededItem
 from rrap_mds_is_registry_api.model.seeded_item import SeededItem
 
 

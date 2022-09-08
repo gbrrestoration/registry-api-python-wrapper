@@ -12,10 +12,28 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.dataset_parameter import DatasetParameter
-from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
-globals()['DatasetParameter'] = DatasetParameter
-globals()['DatasetUsageInformation'] = DatasetUsageInformation
+from rrap_mds_is_registry_api.model.description import Description
+from rrap_mds_is_registry_api.model.enforce_constraints import EnforceConstraints
+from rrap_mds_is_registry_api.model.enforce_size_constraints import EnforceSizeConstraints
+from rrap_mds_is_registry_api.model.extension import Extension
+from rrap_mds_is_registry_api.model.folder import Folder
+from rrap_mds_is_registry_api.model.parameters import Parameters
+from rrap_mds_is_registry_api.model.path import Path
+from rrap_mds_is_registry_api.model.size_estimate import SizeEstimate
+from rrap_mds_is_registry_api.model.size_max import SizeMax
+from rrap_mds_is_registry_api.model.size_min import SizeMin
+from rrap_mds_is_registry_api.model.usage import Usage
+globals()['Description'] = Description
+globals()['EnforceConstraints'] = EnforceConstraints
+globals()['EnforceSizeConstraints'] = EnforceSizeConstraints
+globals()['Extension'] = Extension
+globals()['Folder'] = Folder
+globals()['Parameters'] = Parameters
+globals()['Path'] = Path
+globals()['SizeEstimate'] = SizeEstimate
+globals()['SizeMax'] = SizeMax
+globals()['SizeMin'] = SizeMin
+globals()['Usage'] = Usage
 from rrap_mds_is_registry_api.model.file_information import FileInformation
 
 

@@ -127,8 +127,8 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = general_registry_api.GeneralRegistryApi(api_client)
     query_filter = QueryFilter(
-        item_category=ItemCategory("ACTIVITY"),
-        item_subtype=ItemSubType("WORKFLOW_RUN"),
+        item_category=QueryFilterItemCategory(None),
+        item_subtype=QueryFilterItemSubtype(None),
         record_type=None,
     ) # QueryFilter | 
 

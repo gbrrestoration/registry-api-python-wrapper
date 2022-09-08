@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.ror import Ror
+globals()['Ror'] = Ror
 from rrap_mds_is_registry_api.model.organisation_domain_info import OrganisationDomainInfo
 
 

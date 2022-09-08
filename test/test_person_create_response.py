@@ -12,9 +12,9 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.item_person import ItemPerson
+from rrap_mds_is_registry_api.model.created_item5 import CreatedItem5
 from rrap_mds_is_registry_api.model.status import Status
-globals()['ItemPerson'] = ItemPerson
+globals()['CreatedItem5'] = CreatedItem5
 globals()['Status'] = Status
 from rrap_mds_is_registry_api.model.person_create_response import PersonCreateResponse
 

@@ -30,12 +30,22 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.item_dataset_template import ItemDatasetTemplate
-    from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+    from rrap_mds_is_registry_api.model.complete_item_count import CompleteItemCount
+    from rrap_mds_is_registry_api.model.items import Items
+    from rrap_mds_is_registry_api.model.seed_item_count import SeedItemCount
+    from rrap_mds_is_registry_api.model.seed_items import SeedItems
     from rrap_mds_is_registry_api.model.status import Status
-    globals()['ItemDatasetTemplate'] = ItemDatasetTemplate
-    globals()['SeededItem'] = SeededItem
+    from rrap_mds_is_registry_api.model.total_item_count import TotalItemCount
+    from rrap_mds_is_registry_api.model.unparsable_item_count import UnparsableItemCount
+    from rrap_mds_is_registry_api.model.unparsable_items import UnparsableItems
+    globals()['CompleteItemCount'] = CompleteItemCount
+    globals()['Items'] = Items
+    globals()['SeedItemCount'] = SeedItemCount
+    globals()['SeedItems'] = SeedItems
     globals()['Status'] = Status
+    globals()['TotalItemCount'] = TotalItemCount
+    globals()['UnparsableItemCount'] = UnparsableItemCount
+    globals()['UnparsableItems'] = UnparsableItems
 
 
 class DatasetTemplateListResponse(ModelNormal):
@@ -92,13 +102,13 @@ class DatasetTemplateListResponse(ModelNormal):
         lazy_import()
         return {
             'status': (Status,),  # noqa: E501
-            'items': ([ItemDatasetTemplate],),  # noqa: E501
-            'seed_items': ([SeededItem],),  # noqa: E501
-            'unparsable_items': ([{str: (bool, date, datetime, dict, float, int, list, str, none_type)}],),  # noqa: E501
-            'total_item_count': (int,),  # noqa: E501
-            'complete_item_count': (int,),  # noqa: E501
-            'seed_item_count': (int,),  # noqa: E501
-            'unparsable_item_count': (int,),  # noqa: E501
+            'items': (Items,),  # noqa: E501
+            'seed_items': (SeedItems,),  # noqa: E501
+            'unparsable_items': (UnparsableItems,),  # noqa: E501
+            'total_item_count': (TotalItemCount,),  # noqa: E501
+            'complete_item_count': (CompleteItemCount,),  # noqa: E501
+            'seed_item_count': (SeedItemCount,),  # noqa: E501
+            'unparsable_item_count': (UnparsableItemCount,),  # noqa: E501
         }
 
     @cached_property
@@ -161,13 +171,13 @@ class DatasetTemplateListResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            items ([ItemDatasetTemplate]): [optional]  # noqa: E501
-            seed_items ([SeededItem]): [optional]  # noqa: E501
-            unparsable_items ([{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]): [optional]  # noqa: E501
-            total_item_count (int): [optional]  # noqa: E501
-            complete_item_count (int): [optional]  # noqa: E501
-            seed_item_count (int): [optional]  # noqa: E501
-            unparsable_item_count (int): [optional]  # noqa: E501
+            items (Items): [optional]  # noqa: E501
+            seed_items (SeedItems): [optional]  # noqa: E501
+            unparsable_items (UnparsableItems): [optional]  # noqa: E501
+            total_item_count (TotalItemCount): [optional]  # noqa: E501
+            complete_item_count (CompleteItemCount): [optional]  # noqa: E501
+            seed_item_count (SeedItemCount): [optional]  # noqa: E501
+            unparsable_item_count (UnparsableItemCount): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -257,13 +267,13 @@ class DatasetTemplateListResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            items ([ItemDatasetTemplate]): [optional]  # noqa: E501
-            seed_items ([SeededItem]): [optional]  # noqa: E501
-            unparsable_items ([{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]): [optional]  # noqa: E501
-            total_item_count (int): [optional]  # noqa: E501
-            complete_item_count (int): [optional]  # noqa: E501
-            seed_item_count (int): [optional]  # noqa: E501
-            unparsable_item_count (int): [optional]  # noqa: E501
+            items (Items): [optional]  # noqa: E501
+            seed_items (SeedItems): [optional]  # noqa: E501
+            unparsable_items (UnparsableItems): [optional]  # noqa: E501
+            total_item_count (TotalItemCount): [optional]  # noqa: E501
+            complete_item_count (CompleteItemCount): [optional]  # noqa: E501
+            seed_item_count (SeedItemCount): [optional]  # noqa: E501
+            unparsable_item_count (UnparsableItemCount): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orcid** | **str** |  | [optional] 
+**orcid** | [**Orcid**](Orcid.md) |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **first_name** | **str** |  | [optional] 
 **last_name** | **str** |  | [optional] 

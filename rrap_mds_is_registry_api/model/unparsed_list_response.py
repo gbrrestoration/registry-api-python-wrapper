@@ -30,8 +30,12 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from rrap_mds_is_registry_api.model.items6 import Items6
     from rrap_mds_is_registry_api.model.status import Status
+    from rrap_mds_is_registry_api.model.total_item_count import TotalItemCount
+    globals()['Items6'] = Items6
     globals()['Status'] = Status
+    globals()['TotalItemCount'] = TotalItemCount
 
 
 class UnparsedListResponse(ModelNormal):
@@ -88,8 +92,8 @@ class UnparsedListResponse(ModelNormal):
         lazy_import()
         return {
             'status': (Status,),  # noqa: E501
-            'items': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'total_item_count': (int,),  # noqa: E501
+            'items': (Items6,),  # noqa: E501
+            'total_item_count': (TotalItemCount,),  # noqa: E501
         }
 
     @cached_property
@@ -147,8 +151,8 @@ class UnparsedListResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            items ([bool, date, datetime, dict, float, int, list, str, none_type]): [optional]  # noqa: E501
-            total_item_count (int): [optional]  # noqa: E501
+            items (Items6): [optional]  # noqa: E501
+            total_item_count (TotalItemCount): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -238,8 +242,8 @@ class UnparsedListResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            items ([bool, date, datetime, dict, float, int, list, str, none_type]): [optional]  # noqa: E501
-            total_item_count (int): [optional]  # noqa: E501
+            items (Items6): [optional]  # noqa: E501
+            total_item_count (TotalItemCount): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

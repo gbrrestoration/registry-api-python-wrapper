@@ -30,22 +30,24 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
-    from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
     from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
     from rrap_mds_is_registry_api.model.item_category import ItemCategory
     from rrap_mds_is_registry_api.model.item_dataset_template import ItemDatasetTemplate
     from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
     from rrap_mds_is_registry_api.model.record_type import RecordType
     from rrap_mds_is_registry_api.model.seeded_item import SeededItem
-    globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
-    globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
+    from rrap_mds_is_registry_api.model.spatial_information import SpatialInformation
+    from rrap_mds_is_registry_api.model.structural_template import StructuralTemplate
+    from rrap_mds_is_registry_api.model.temporal_information import TemporalInformation
     globals()['DatasetUsageInformation'] = DatasetUsageInformation
     globals()['ItemCategory'] = ItemCategory
     globals()['ItemDatasetTemplate'] = ItemDatasetTemplate
     globals()['ItemSubType'] = ItemSubType
     globals()['RecordType'] = RecordType
     globals()['SeededItem'] = SeededItem
+    globals()['SpatialInformation'] = SpatialInformation
+    globals()['StructuralTemplate'] = StructuralTemplate
+    globals()['TemporalInformation'] = TemporalInformation
 
 
 class Item(ModelComposed):
@@ -101,9 +103,9 @@ class Item(ModelComposed):
         """
         lazy_import()
         return {
-            'structural_template': (DatasetStructuralTemplate,),  # noqa: E501
-            'spatial_information': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'temporal_information': (DatasetTemporalInformation,),  # noqa: E501
+            'structural_template': (StructuralTemplate,),  # noqa: E501
+            'spatial_information': (SpatialInformation,),  # noqa: E501
+            'temporal_information': (TemporalInformation,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
             'usage_information': (DatasetUsageInformation,),  # noqa: E501
             'id': (str,),  # noqa: E501
@@ -172,9 +174,9 @@ class Item(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            structural_template (DatasetStructuralTemplate): [optional]  # noqa: E501
-            spatial_information ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            temporal_information (DatasetTemporalInformation): [optional]  # noqa: E501
+            structural_template (StructuralTemplate): [optional]  # noqa: E501
+            spatial_information (SpatialInformation): [optional]  # noqa: E501
+            temporal_information (TemporalInformation): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             usage_information (DatasetUsageInformation): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
@@ -286,9 +288,9 @@ class Item(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            structural_template (DatasetStructuralTemplate): [optional]  # noqa: E501
-            spatial_information ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            temporal_information (DatasetTemporalInformation): [optional]  # noqa: E501
+            structural_template (StructuralTemplate): [optional]  # noqa: E501
+            spatial_information (SpatialInformation): [optional]  # noqa: E501
+            temporal_information (TemporalInformation): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             usage_information (DatasetUsageInformation): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
@@ -366,6 +368,7 @@ class Item(ModelComposed):
           'anyOf': [
               ItemDatasetTemplate,
               SeededItem,
+              none_type,
           ],
           'allOf': [
           ],

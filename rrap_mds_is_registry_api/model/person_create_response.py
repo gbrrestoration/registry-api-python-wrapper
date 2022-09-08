@@ -30,9 +30,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.item_person import ItemPerson
+    from rrap_mds_is_registry_api.model.created_item5 import CreatedItem5
     from rrap_mds_is_registry_api.model.status import Status
-    globals()['ItemPerson'] = ItemPerson
+    globals()['CreatedItem5'] = CreatedItem5
     globals()['Status'] = Status
 
 
@@ -90,7 +90,7 @@ class PersonCreateResponse(ModelNormal):
         lazy_import()
         return {
             'status': (Status,),  # noqa: E501
-            'created_item': (ItemPerson,),  # noqa: E501
+            'created_item': (CreatedItem5,),  # noqa: E501
         }
 
     @cached_property
@@ -147,7 +147,7 @@ class PersonCreateResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_item (ItemPerson): [optional]  # noqa: E501
+            created_item (CreatedItem5): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,7 +237,7 @@ class PersonCreateResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_item (ItemPerson): [optional]  # noqa: E501
+            created_item (CreatedItem5): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

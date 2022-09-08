@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.item6 import Item6
 from rrap_mds_is_registry_api.model.status import Status
+globals()['Item6'] = Item6
 globals()['Status'] = Status
 from rrap_mds_is_registry_api.model.untyped_fetch_response import UntypedFetchResponse
 

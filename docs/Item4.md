@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ror** | **str** |  | [optional] 
+**ror** | [**Ror**](Ror.md) |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 

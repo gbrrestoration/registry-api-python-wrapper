@@ -12,8 +12,12 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.items6 import Items6
 from rrap_mds_is_registry_api.model.status import Status
+from rrap_mds_is_registry_api.model.total_item_count import TotalItemCount
+globals()['Items6'] = Items6
 globals()['Status'] = Status
+globals()['TotalItemCount'] = TotalItemCount
 from rrap_mds_is_registry_api.model.unparsed_list_response import UnparsedListResponse
 
 

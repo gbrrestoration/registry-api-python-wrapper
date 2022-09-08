@@ -13,9 +13,9 @@ import unittest
 
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.model.modeller_resource import ModellerResource
-from rrap_mds_is_registry_api.model.organisation_resource import OrganisationResource
+from rrap_mds_is_registry_api.model.requesting_organisation import RequestingOrganisation
 globals()['ModellerResource'] = ModellerResource
-globals()['OrganisationResource'] = OrganisationResource
+globals()['RequestingOrganisation'] = RequestingOrganisation
 from rrap_mds_is_registry_api.model.association_info import AssociationInfo
 
 

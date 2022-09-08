@@ -30,12 +30,14 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
-    from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
     from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
-    globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
-    globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
+    from rrap_mds_is_registry_api.model.spatial_information import SpatialInformation
+    from rrap_mds_is_registry_api.model.structural_template import StructuralTemplate
+    from rrap_mds_is_registry_api.model.temporal_information import TemporalInformation
     globals()['DatasetUsageInformation'] = DatasetUsageInformation
+    globals()['SpatialInformation'] = SpatialInformation
+    globals()['StructuralTemplate'] = StructuralTemplate
+    globals()['TemporalInformation'] = TemporalInformation
 
 
 class DatasetTemplateDomainInfo(ModelNormal):
@@ -93,9 +95,9 @@ class DatasetTemplateDomainInfo(ModelNormal):
         return {
             'display_name': (str,),  # noqa: E501
             'usage_information': (DatasetUsageInformation,),  # noqa: E501
-            'structural_template': (DatasetStructuralTemplate,),  # noqa: E501
-            'spatial_information': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'temporal_information': (DatasetTemporalInformation,),  # noqa: E501
+            'structural_template': (StructuralTemplate,),  # noqa: E501
+            'spatial_information': (SpatialInformation,),  # noqa: E501
+            'temporal_information': (TemporalInformation,),  # noqa: E501
         }
 
     @cached_property
@@ -156,9 +158,9 @@ class DatasetTemplateDomainInfo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            structural_template (DatasetStructuralTemplate): [optional]  # noqa: E501
-            spatial_information ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            temporal_information (DatasetTemporalInformation): [optional]  # noqa: E501
+            structural_template (StructuralTemplate): [optional]  # noqa: E501
+            spatial_information (SpatialInformation): [optional]  # noqa: E501
+            temporal_information (TemporalInformation): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -250,9 +252,9 @@ class DatasetTemplateDomainInfo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            structural_template (DatasetStructuralTemplate): [optional]  # noqa: E501
-            spatial_information ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            temporal_information (DatasetTemporalInformation): [optional]  # noqa: E501
+            structural_template (StructuralTemplate): [optional]  # noqa: E501
+            spatial_information (SpatialInformation): [optional]  # noqa: E501
+            temporal_information (TemporalInformation): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

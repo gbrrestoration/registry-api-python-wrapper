@@ -13,8 +13,10 @@ import unittest
 
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.model.item2 import Item2
+from rrap_mds_is_registry_api.model.item_is_seed import ItemIsSeed
 from rrap_mds_is_registry_api.model.status import Status
 globals()['Item2'] = Item2
+globals()['ItemIsSeed'] = ItemIsSeed
 globals()['Status'] = Status
 from rrap_mds_is_registry_api.model.model_run_fetch_response import ModelRunFetchResponse
 

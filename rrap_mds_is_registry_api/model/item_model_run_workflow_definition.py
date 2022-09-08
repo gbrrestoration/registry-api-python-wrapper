@@ -30,8 +30,12 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from rrap_mds_is_registry_api.model.automation_schedule import AutomationSchedule
     from rrap_mds_is_registry_api.model.record_type import RecordType
+    from rrap_mds_is_registry_api.model.version import Version
+    globals()['AutomationSchedule'] = AutomationSchedule
     globals()['RecordType'] = RecordType
+    globals()['Version'] = Version
 
 
 class ItemModelRunWorkflowDefinition(ModelNormal):
@@ -95,8 +99,8 @@ class ItemModelRunWorkflowDefinition(ModelNormal):
             'created_timestamp': (int,),  # noqa: E501
             'updated_timestamp': (int,),  # noqa: E501
             'record_type': (RecordType,),  # noqa: E501
-            'version': (str,),  # noqa: E501
-            'automation_schedule': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'version': (Version,),  # noqa: E501
+            'automation_schedule': (AutomationSchedule,),  # noqa: E501
             'item_category': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'item_subtype': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
@@ -172,8 +176,8 @@ class ItemModelRunWorkflowDefinition(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            version (str): [optional]  # noqa: E501
-            automation_schedule ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            version (Version): [optional]  # noqa: E501
+            automation_schedule (AutomationSchedule): [optional]  # noqa: E501
             item_category (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             item_subtype (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
@@ -279,8 +283,8 @@ class ItemModelRunWorkflowDefinition(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            version (str): [optional]  # noqa: E501
-            automation_schedule ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            version (Version): [optional]  # noqa: E501
+            automation_schedule (AutomationSchedule): [optional]  # noqa: E501
             item_category (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             item_subtype (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """

@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_category** | [**ItemCategory**](ItemCategory.md) |  | [optional] 
-**item_subtype** | [**ItemSubType**](ItemSubType.md) |  | [optional] 
+**item_category** | [**QueryFilterItemCategory**](QueryFilterItemCategory.md) |  | [optional] 
+**item_subtype** | [**QueryFilterItemSubtype**](QueryFilterItemSubtype.md) |  | [optional] 
 **record_type** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

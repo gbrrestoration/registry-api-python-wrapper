@@ -31,7 +31,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 def lazy_import():
     from rrap_mds_is_registry_api.model.record_type import RecordType
+    from rrap_mds_is_registry_api.model.ror import Ror
     globals()['RecordType'] = RecordType
+    globals()['Ror'] = Ror
 
 
 class ItemOrganisation(ModelNormal):
@@ -62,10 +64,6 @@ class ItemOrganisation(ModelNormal):
     }
 
     validations = {
-        ('ror',): {
-            'max_length': 65536,
-            'min_length': 1,
-        },
     }
 
     @cached_property
@@ -97,7 +95,7 @@ class ItemOrganisation(ModelNormal):
             'created_timestamp': (int,),  # noqa: E501
             'updated_timestamp': (int,),  # noqa: E501
             'record_type': (RecordType,),  # noqa: E501
-            'ror': (str,),  # noqa: E501
+            'ror': (Ror,),  # noqa: E501
             'item_category': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'item_subtype': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
@@ -168,7 +166,7 @@ class ItemOrganisation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ror (str): [optional]  # noqa: E501
+            ror (Ror): [optional]  # noqa: E501
             item_category (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             item_subtype (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
@@ -270,7 +268,7 @@ class ItemOrganisation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ror (str): [optional]  # noqa: E501
+            ror (Ror): [optional]  # noqa: E501
             item_category (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             item_subtype (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """

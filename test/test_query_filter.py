@@ -12,10 +12,10 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.item_category import ItemCategory
-from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
-globals()['ItemCategory'] = ItemCategory
-globals()['ItemSubType'] = ItemSubType
+from rrap_mds_is_registry_api.model.query_filter_item_category import QueryFilterItemCategory
+from rrap_mds_is_registry_api.model.query_filter_item_subtype import QueryFilterItemSubtype
+globals()['QueryFilterItemCategory'] = QueryFilterItemCategory
+globals()['QueryFilterItemSubtype'] = QueryFilterItemSubtype
 from rrap_mds_is_registry_api.model.query_filter import QueryFilter
 
 

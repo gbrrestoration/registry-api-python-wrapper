@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.email import Email
+globals()['Email'] = Email
 from rrap_mds_is_registry_api.model.user import User
 
 

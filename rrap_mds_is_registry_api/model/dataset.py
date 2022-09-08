@@ -30,11 +30,15 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from rrap_mds_is_registry_api.model.credentials import Credentials
     from rrap_mds_is_registry_api.model.data_store_dataset_resource import DataStoreDatasetResource
     from rrap_mds_is_registry_api.model.file_system_resource import FileSystemResource
+    from rrap_mds_is_registry_api.model.filename_regex import FilenameRegex
     from rrap_mds_is_registry_api.model.url_dataset_resource import URLDatasetResource
+    globals()['Credentials'] = Credentials
     globals()['DataStoreDatasetResource'] = DataStoreDatasetResource
     globals()['FileSystemResource'] = FileSystemResource
+    globals()['FilenameRegex'] = FilenameRegex
     globals()['URLDatasetResource'] = URLDatasetResource
 
 
@@ -95,8 +99,8 @@ class Dataset(ModelComposed):
         """
         lazy_import()
         return {
-            'credentials': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'filename_regex': (str,),  # noqa: E501
+            'credentials': (Credentials,),  # noqa: E501
+            'filename_regex': (FilenameRegex,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'url': (str,),  # noqa: E501
             'file_system_location': (str,),  # noqa: E501
@@ -154,8 +158,8 @@ class Dataset(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            credentials ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            filename_regex (str): [optional]  # noqa: E501
+            credentials (Credentials): [optional]  # noqa: E501
+            filename_regex (FilenameRegex): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             url (str): [optional]  # noqa: E501
             file_system_location (str): [optional]  # noqa: E501
@@ -262,8 +266,8 @@ class Dataset(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            credentials ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            filename_regex (str): [optional]  # noqa: E501
+            credentials (Credentials): [optional]  # noqa: E501
+            filename_regex (FilenameRegex): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
             url (str): [optional]  # noqa: E501
             file_system_location (str): [optional]  # noqa: E501

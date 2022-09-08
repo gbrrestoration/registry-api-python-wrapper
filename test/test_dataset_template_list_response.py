@@ -12,12 +12,22 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.item_dataset_template import ItemDatasetTemplate
-from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+from rrap_mds_is_registry_api.model.complete_item_count import CompleteItemCount
+from rrap_mds_is_registry_api.model.items import Items
+from rrap_mds_is_registry_api.model.seed_item_count import SeedItemCount
+from rrap_mds_is_registry_api.model.seed_items import SeedItems
 from rrap_mds_is_registry_api.model.status import Status
-globals()['ItemDatasetTemplate'] = ItemDatasetTemplate
-globals()['SeededItem'] = SeededItem
+from rrap_mds_is_registry_api.model.total_item_count import TotalItemCount
+from rrap_mds_is_registry_api.model.unparsable_item_count import UnparsableItemCount
+from rrap_mds_is_registry_api.model.unparsable_items import UnparsableItems
+globals()['CompleteItemCount'] = CompleteItemCount
+globals()['Items'] = Items
+globals()['SeedItemCount'] = SeedItemCount
+globals()['SeedItems'] = SeedItems
 globals()['Status'] = Status
+globals()['TotalItemCount'] = TotalItemCount
+globals()['UnparsableItemCount'] = UnparsableItemCount
+globals()['UnparsableItems'] = UnparsableItems
 from rrap_mds_is_registry_api.model.dataset_template_list_response import DatasetTemplateListResponse
 
 

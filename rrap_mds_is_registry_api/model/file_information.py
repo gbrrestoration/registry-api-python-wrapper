@@ -30,10 +30,28 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.dataset_parameter import DatasetParameter
-    from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
-    globals()['DatasetParameter'] = DatasetParameter
-    globals()['DatasetUsageInformation'] = DatasetUsageInformation
+    from rrap_mds_is_registry_api.model.description import Description
+    from rrap_mds_is_registry_api.model.enforce_constraints import EnforceConstraints
+    from rrap_mds_is_registry_api.model.enforce_size_constraints import EnforceSizeConstraints
+    from rrap_mds_is_registry_api.model.extension import Extension
+    from rrap_mds_is_registry_api.model.folder import Folder
+    from rrap_mds_is_registry_api.model.parameters import Parameters
+    from rrap_mds_is_registry_api.model.path import Path
+    from rrap_mds_is_registry_api.model.size_estimate import SizeEstimate
+    from rrap_mds_is_registry_api.model.size_max import SizeMax
+    from rrap_mds_is_registry_api.model.size_min import SizeMin
+    from rrap_mds_is_registry_api.model.usage import Usage
+    globals()['Description'] = Description
+    globals()['EnforceConstraints'] = EnforceConstraints
+    globals()['EnforceSizeConstraints'] = EnforceSizeConstraints
+    globals()['Extension'] = Extension
+    globals()['Folder'] = Folder
+    globals()['Parameters'] = Parameters
+    globals()['Path'] = Path
+    globals()['SizeEstimate'] = SizeEstimate
+    globals()['SizeMax'] = SizeMax
+    globals()['SizeMin'] = SizeMin
+    globals()['Usage'] = Usage
 
 
 class FileInformation(ModelNormal):
@@ -89,17 +107,17 @@ class FileInformation(ModelNormal):
         """
         lazy_import()
         return {
-            'folder': (bool,),  # noqa: E501
-            'usage': (DatasetUsageInformation,),  # noqa: E501
-            'path': (str,),  # noqa: E501
-            'extension': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'parameters': ([DatasetParameter],),  # noqa: E501
-            'size_estimate': (int,),  # noqa: E501
-            'size_min': (int,),  # noqa: E501
-            'size_max': (int,),  # noqa: E501
-            'enforce_size_constraints': (bool,),  # noqa: E501
-            'enforce_constraints': (bool,),  # noqa: E501
+            'folder': (Folder,),  # noqa: E501
+            'usage': (Usage,),  # noqa: E501
+            'path': (Path,),  # noqa: E501
+            'extension': (Extension,),  # noqa: E501
+            'description': (Description,),  # noqa: E501
+            'parameters': (Parameters,),  # noqa: E501
+            'size_estimate': (SizeEstimate,),  # noqa: E501
+            'size_min': (SizeMin,),  # noqa: E501
+            'size_max': (SizeMax,),  # noqa: E501
+            'enforce_size_constraints': (EnforceSizeConstraints,),  # noqa: E501
+            'enforce_constraints': (EnforceConstraints,),  # noqa: E501
         }
 
     @cached_property
@@ -162,17 +180,17 @@ class FileInformation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder (bool): [optional]  # noqa: E501
-            usage (DatasetUsageInformation): [optional]  # noqa: E501
-            path (str): [optional]  # noqa: E501
-            extension (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            parameters ([DatasetParameter]): [optional]  # noqa: E501
-            size_estimate (int): [optional]  # noqa: E501
-            size_min (int): [optional]  # noqa: E501
-            size_max (int): [optional]  # noqa: E501
-            enforce_size_constraints (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
-            enforce_constraints (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
+            folder (Folder): [optional]  # noqa: E501
+            usage (Usage): [optional]  # noqa: E501
+            path (Path): [optional]  # noqa: E501
+            extension (Extension): [optional]  # noqa: E501
+            description (Description): [optional]  # noqa: E501
+            parameters (Parameters): [optional]  # noqa: E501
+            size_estimate (SizeEstimate): [optional]  # noqa: E501
+            size_min (SizeMin): [optional]  # noqa: E501
+            size_max (SizeMax): [optional]  # noqa: E501
+            enforce_size_constraints (EnforceSizeConstraints): [optional]  # noqa: E501
+            enforce_constraints (EnforceConstraints): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -258,17 +276,17 @@ class FileInformation(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            folder (bool): [optional]  # noqa: E501
-            usage (DatasetUsageInformation): [optional]  # noqa: E501
-            path (str): [optional]  # noqa: E501
-            extension (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            parameters ([DatasetParameter]): [optional]  # noqa: E501
-            size_estimate (int): [optional]  # noqa: E501
-            size_min (int): [optional]  # noqa: E501
-            size_max (int): [optional]  # noqa: E501
-            enforce_size_constraints (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
-            enforce_constraints (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
+            folder (Folder): [optional]  # noqa: E501
+            usage (Usage): [optional]  # noqa: E501
+            path (Path): [optional]  # noqa: E501
+            extension (Extension): [optional]  # noqa: E501
+            description (Description): [optional]  # noqa: E501
+            parameters (Parameters): [optional]  # noqa: E501
+            size_estimate (SizeEstimate): [optional]  # noqa: E501
+            size_min (SizeMin): [optional]  # noqa: E501
+            size_max (SizeMax): [optional]  # noqa: E501
+            enforce_size_constraints (EnforceSizeConstraints): [optional]  # noqa: E501
+            enforce_constraints (EnforceConstraints): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

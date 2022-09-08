@@ -12,6 +12,10 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.automation_schedule import AutomationSchedule
+from rrap_mds_is_registry_api.model.version import Version
+globals()['AutomationSchedule'] = AutomationSchedule
+globals()['Version'] = Version
 from rrap_mds_is_registry_api.model.model_run_workflow_definition_domain_info import ModelRunWorkflowDefinitionDomainInfo
 
 

@@ -12,6 +12,16 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.column_index import ColumnIndex
+from rrap_mds_is_registry_api.model.column_name import ColumnName
+from rrap_mds_is_registry_api.model.description import Description
+from rrap_mds_is_registry_api.model.parameter_name import ParameterName
+from rrap_mds_is_registry_api.model.vocabulary_id import VocabularyId
+globals()['ColumnIndex'] = ColumnIndex
+globals()['ColumnName'] = ColumnName
+globals()['Description'] = Description
+globals()['ParameterName'] = ParameterName
+globals()['VocabularyId'] = VocabularyId
 from rrap_mds_is_registry_api.model.dataset_parameter import DatasetParameter
 
 

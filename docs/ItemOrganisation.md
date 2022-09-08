@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **created_timestamp** | **int** |  | 
 **updated_timestamp** | **int** |  | 
 **record_type** | [**RecordType**](RecordType.md) |  | 
-**ror** | **str** |  | [optional] 
+**ror** | [**Ror**](Ror.md) |  | [optional] 
 **item_category** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **item_subtype** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

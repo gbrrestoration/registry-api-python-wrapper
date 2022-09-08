@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.filename_regex import FilenameRegex
+globals()['FilenameRegex'] = FilenameRegex
 from rrap_mds_is_registry_api.model.file_system_resource import FileSystemResource
 
 

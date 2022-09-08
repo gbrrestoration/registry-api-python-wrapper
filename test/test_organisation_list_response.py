@@ -12,12 +12,22 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
-from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+from rrap_mds_is_registry_api.model.complete_item_count import CompleteItemCount
+from rrap_mds_is_registry_api.model.items4 import Items4
+from rrap_mds_is_registry_api.model.seed_item_count import SeedItemCount
+from rrap_mds_is_registry_api.model.seed_items import SeedItems
 from rrap_mds_is_registry_api.model.status import Status
-globals()['ItemOrganisation'] = ItemOrganisation
-globals()['SeededItem'] = SeededItem
+from rrap_mds_is_registry_api.model.total_item_count import TotalItemCount
+from rrap_mds_is_registry_api.model.unparsable_item_count import UnparsableItemCount
+from rrap_mds_is_registry_api.model.unparsable_items import UnparsableItems
+globals()['CompleteItemCount'] = CompleteItemCount
+globals()['Items4'] = Items4
+globals()['SeedItemCount'] = SeedItemCount
+globals()['SeedItems'] = SeedItems
 globals()['Status'] = Status
+globals()['TotalItemCount'] = TotalItemCount
+globals()['UnparsableItemCount'] = UnparsableItemCount
+globals()['UnparsableItems'] = UnparsableItems
 from rrap_mds_is_registry_api.model.organisation_list_response import OrganisationListResponse
 
 

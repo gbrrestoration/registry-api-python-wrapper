@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**version** | **str** |  | [optional] 
-**automation_schedule** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
+**version** | [**Version**](Version.md) |  | [optional] 
+**automation_schedule** | [**AutomationSchedule**](AutomationSchedule.md) |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **software** | **str** |  | [optional] 
 **input_templates** | **[str]** |  | [optional] 

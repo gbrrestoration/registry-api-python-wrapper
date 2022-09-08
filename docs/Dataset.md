@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**credentials** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
-**filename_regex** | **str** |  | [optional] 
+**credentials** | [**Credentials**](Credentials.md) |  | [optional] 
+**filename_regex** | [**FilenameRegex**](FilenameRegex.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **file_system_location** | **str** |  | [optional] 

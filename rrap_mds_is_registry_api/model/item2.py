@@ -360,6 +360,7 @@ class Item2(ModelComposed):
           'anyOf': [
               ItemModelRun,
               SeededItem,
+              none_type,
           ],
           'allOf': [
           ],

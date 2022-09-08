@@ -30,9 +30,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.item_dataset_template import ItemDatasetTemplate
+    from rrap_mds_is_registry_api.model.created_item import CreatedItem
     from rrap_mds_is_registry_api.model.status import Status
-    globals()['ItemDatasetTemplate'] = ItemDatasetTemplate
+    globals()['CreatedItem'] = CreatedItem
     globals()['Status'] = Status
 
 
@@ -90,7 +90,7 @@ class DatasetTemplateCreateResponse(ModelNormal):
         lazy_import()
         return {
             'status': (Status,),  # noqa: E501
-            'created_item': (ItemDatasetTemplate,),  # noqa: E501
+            'created_item': (CreatedItem,),  # noqa: E501
         }
 
     @cached_property
@@ -147,7 +147,7 @@ class DatasetTemplateCreateResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_item (ItemDatasetTemplate): [optional]  # noqa: E501
+            created_item (CreatedItem): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,7 +237,7 @@ class DatasetTemplateCreateResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_item (ItemDatasetTemplate): [optional]  # noqa: E501
+            created_item (CreatedItem): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

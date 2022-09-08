@@ -34,11 +34,13 @@ def lazy_import():
     from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
     from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
     from rrap_mds_is_registry_api.model.record_type import RecordType
+    from rrap_mds_is_registry_api.model.ror import Ror
     from rrap_mds_is_registry_api.model.seeded_item import SeededItem
     globals()['ItemCategory'] = ItemCategory
     globals()['ItemOrganisation'] = ItemOrganisation
     globals()['ItemSubType'] = ItemSubType
     globals()['RecordType'] = RecordType
+    globals()['Ror'] = Ror
     globals()['SeededItem'] = SeededItem
 
 
@@ -70,10 +72,6 @@ class Item4(ModelComposed):
     }
 
     validations = {
-        ('ror',): {
-            'max_length': 65536,
-            'min_length': 1,
-        },
     }
 
     @cached_property
@@ -99,7 +97,7 @@ class Item4(ModelComposed):
         """
         lazy_import()
         return {
-            'ror': (str,),  # noqa: E501
+            'ror': (Ror,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'id': (str,),  # noqa: E501
@@ -166,7 +164,7 @@ class Item4(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ror (str): [optional]  # noqa: E501
+            ror (Ror): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
@@ -278,7 +276,7 @@ class Item4(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ror (str): [optional]  # noqa: E501
+            ror (Ror): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             id (str): [optional]  # noqa: E501
@@ -356,6 +354,7 @@ class Item4(ModelComposed):
           'anyOf': [
               ItemOrganisation,
               SeededItem,
+              none_type,
           ],
           'allOf': [
           ],

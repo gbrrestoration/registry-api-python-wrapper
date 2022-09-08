@@ -288,6 +288,7 @@ list_items Lists all items of the specified type (by route). Sorts items  into p
 import time
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.api import model_api
+from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
 from rrap_mds_is_registry_api.model.model_list_response import ModelListResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -311,11 +312,13 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = model_api.ModelApi(api_client)
+    record_type = None # bool, date, datetime, dict, float, int, list, str, none_type |  (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # List Items
-        api_response = api_instance.list_entity_model()
+        api_response = api_instance.list_entity_model(record_type=record_type)
         pprint(api_response)
     except rrap_mds_is_registry_api.ApiException as e:
         print("Exception when calling ModelApi->list_entity_model: %s\n" % e)
@@ -323,7 +326,10 @@ with rrap_mds_is_registry_api.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **record_type** | **bool, date, datetime, dict, float, int, list, str, none_type**|  | [optional]
 
 ### Return type
 
@@ -344,6 +350,7 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful Response |  -  |
+**422** | Validation Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

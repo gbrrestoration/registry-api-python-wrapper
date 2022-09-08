@@ -13,7 +13,9 @@ import unittest
 
 import rrap_mds_is_registry_api
 from rrap_mds_is_registry_api.model.record_type import RecordType
+from rrap_mds_is_registry_api.model.ror import Ror
 globals()['RecordType'] = RecordType
+globals()['Ror'] = Ror
 from rrap_mds_is_registry_api.model.item_organisation import ItemOrganisation
 
 

@@ -30,7 +30,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from rrap_mds_is_registry_api.model.item6 import Item6
     from rrap_mds_is_registry_api.model.status import Status
+    globals()['Item6'] = Item6
     globals()['Status'] = Status
 
 
@@ -88,7 +90,7 @@ class UntypedFetchResponse(ModelNormal):
         lazy_import()
         return {
             'status': (Status,),  # noqa: E501
-            'item': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'item': (Item6,),  # noqa: E501
         }
 
     @cached_property
@@ -145,7 +147,7 @@ class UntypedFetchResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            item (Item6): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -235,7 +237,7 @@ class UntypedFetchResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            item ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            item (Item6): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

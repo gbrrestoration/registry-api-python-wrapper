@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.json_schema import JsonSchema
 from rrap_mds_is_registry_api.model.status import Status
+globals()['JsonSchema'] = JsonSchema
 globals()['Status'] = Status
 from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 

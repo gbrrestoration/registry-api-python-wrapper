@@ -33,11 +33,13 @@ def lazy_import():
     from rrap_mds_is_registry_api.model.item_category import ItemCategory
     from rrap_mds_is_registry_api.model.item_person import ItemPerson
     from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
+    from rrap_mds_is_registry_api.model.orcid import Orcid
     from rrap_mds_is_registry_api.model.record_type import RecordType
     from rrap_mds_is_registry_api.model.seeded_item import SeededItem
     globals()['ItemCategory'] = ItemCategory
     globals()['ItemPerson'] = ItemPerson
     globals()['ItemSubType'] = ItemSubType
+    globals()['Orcid'] = Orcid
     globals()['RecordType'] = RecordType
     globals()['SeededItem'] = SeededItem
 
@@ -70,10 +72,6 @@ class Item5(ModelComposed):
     }
 
     validations = {
-        ('orcid',): {
-            'max_length': 65536,
-            'min_length': 1,
-        },
     }
 
     @cached_property
@@ -99,7 +97,7 @@ class Item5(ModelComposed):
         """
         lazy_import()
         return {
-            'orcid': (str,),  # noqa: E501
+            'orcid': (Orcid,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
             'first_name': (str,),  # noqa: E501
             'last_name': (str,),  # noqa: E501
@@ -170,7 +168,7 @@ class Item5(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            orcid (str): [optional]  # noqa: E501
+            orcid (Orcid): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             first_name (str): [optional]  # noqa: E501
             last_name (str): [optional]  # noqa: E501
@@ -284,7 +282,7 @@ class Item5(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            orcid (str): [optional]  # noqa: E501
+            orcid (Orcid): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             first_name (str): [optional]  # noqa: E501
             last_name (str): [optional]  # noqa: E501
@@ -364,6 +362,7 @@ class Item5(ModelComposed):
           'anyOf': [
               ItemPerson,
               SeededItem,
+              none_type,
           ],
           'allOf': [
           ],

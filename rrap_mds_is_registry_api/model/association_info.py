@@ -31,9 +31,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 def lazy_import():
     from rrap_mds_is_registry_api.model.modeller_resource import ModellerResource
-    from rrap_mds_is_registry_api.model.organisation_resource import OrganisationResource
+    from rrap_mds_is_registry_api.model.requesting_organisation import RequestingOrganisation
     globals()['ModellerResource'] = ModellerResource
-    globals()['OrganisationResource'] = OrganisationResource
+    globals()['RequestingOrganisation'] = RequestingOrganisation
 
 
 class AssociationInfo(ModelNormal):
@@ -90,7 +90,7 @@ class AssociationInfo(ModelNormal):
         lazy_import()
         return {
             'modeller': (ModellerResource,),  # noqa: E501
-            'requesting_organisation': (OrganisationResource,),  # noqa: E501
+            'requesting_organisation': (RequestingOrganisation,),  # noqa: E501
         }
 
     @cached_property
@@ -147,7 +147,7 @@ class AssociationInfo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            requesting_organisation (OrganisationResource): [optional]  # noqa: E501
+            requesting_organisation (RequestingOrganisation): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,7 +237,7 @@ class AssociationInfo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            requesting_organisation (OrganisationResource): [optional]  # noqa: E501
+            requesting_organisation (RequestingOrganisation): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

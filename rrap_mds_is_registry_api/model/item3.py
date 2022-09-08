@@ -30,16 +30,20 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from rrap_mds_is_registry_api.model.automation_schedule import AutomationSchedule
     from rrap_mds_is_registry_api.model.item_category import ItemCategory
     from rrap_mds_is_registry_api.model.item_model_run_workflow_definition import ItemModelRunWorkflowDefinition
     from rrap_mds_is_registry_api.model.item_sub_type import ItemSubType
     from rrap_mds_is_registry_api.model.record_type import RecordType
     from rrap_mds_is_registry_api.model.seeded_item import SeededItem
+    from rrap_mds_is_registry_api.model.version import Version
+    globals()['AutomationSchedule'] = AutomationSchedule
     globals()['ItemCategory'] = ItemCategory
     globals()['ItemModelRunWorkflowDefinition'] = ItemModelRunWorkflowDefinition
     globals()['ItemSubType'] = ItemSubType
     globals()['RecordType'] = RecordType
     globals()['SeededItem'] = SeededItem
+    globals()['Version'] = Version
 
 
 class Item3(ModelComposed):
@@ -95,8 +99,8 @@ class Item3(ModelComposed):
         """
         lazy_import()
         return {
-            'version': (str,),  # noqa: E501
-            'automation_schedule': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'version': (Version,),  # noqa: E501
+            'automation_schedule': (AutomationSchedule,),  # noqa: E501
             'display_name': (str,),  # noqa: E501
             'software': (str,),  # noqa: E501
             'input_templates': ([str],),  # noqa: E501
@@ -168,8 +172,8 @@ class Item3(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            version (str): [optional]  # noqa: E501
-            automation_schedule ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            version (Version): [optional]  # noqa: E501
+            automation_schedule (AutomationSchedule): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             software (str): [optional]  # noqa: E501
             input_templates ([str]): [optional]  # noqa: E501
@@ -283,8 +287,8 @@ class Item3(ModelComposed):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            version (str): [optional]  # noqa: E501
-            automation_schedule ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            version (Version): [optional]  # noqa: E501
+            automation_schedule (AutomationSchedule): [optional]  # noqa: E501
             display_name (str): [optional]  # noqa: E501
             software (str): [optional]  # noqa: E501
             input_templates ([str]): [optional]  # noqa: E501
@@ -364,6 +368,7 @@ class Item3(ModelComposed):
           'anyOf': [
               ItemModelRunWorkflowDefinition,
               SeededItem,
+              none_type,
           ],
           'allOf': [
           ],

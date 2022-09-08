@@ -30,7 +30,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from rrap_mds_is_registry_api.model.additional_description import AdditionalDescription
     from rrap_mds_is_registry_api.model.file_information import FileInformation
+    globals()['AdditionalDescription'] = AdditionalDescription
     globals()['FileInformation'] = FileInformation
 
 
@@ -87,7 +89,7 @@ class DatasetStructuralTemplate(ModelNormal):
         """
         lazy_import()
         return {
-            'additional_description': (str,),  # noqa: E501
+            'additional_description': (AdditionalDescription,),  # noqa: E501
             'file_information': ([FileInformation],),  # noqa: E501
         }
 
@@ -142,7 +144,7 @@ class DatasetStructuralTemplate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            additional_description (str): [optional]  # noqa: E501
+            additional_description (AdditionalDescription): [optional]  # noqa: E501
             file_information ([FileInformation]): [optional] if omitted the server will use the default value of []  # noqa: E501
         """
 
@@ -229,7 +231,7 @@ class DatasetStructuralTemplate(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            additional_description (str): [optional]  # noqa: E501
+            additional_description (AdditionalDescription): [optional]  # noqa: E501
             file_information ([FileInformation]): [optional] if omitted the server will use the default value of []  # noqa: E501
         """
 

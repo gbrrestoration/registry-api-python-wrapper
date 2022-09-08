@@ -12,12 +12,14 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.dataset_structural_template import DatasetStructuralTemplate
-from rrap_mds_is_registry_api.model.dataset_temporal_information import DatasetTemporalInformation
 from rrap_mds_is_registry_api.model.dataset_usage_information import DatasetUsageInformation
-globals()['DatasetStructuralTemplate'] = DatasetStructuralTemplate
-globals()['DatasetTemporalInformation'] = DatasetTemporalInformation
+from rrap_mds_is_registry_api.model.spatial_information import SpatialInformation
+from rrap_mds_is_registry_api.model.structural_template import StructuralTemplate
+from rrap_mds_is_registry_api.model.temporal_information import TemporalInformation
 globals()['DatasetUsageInformation'] = DatasetUsageInformation
+globals()['SpatialInformation'] = SpatialInformation
+globals()['StructuralTemplate'] = StructuralTemplate
+globals()['TemporalInformation'] = TemporalInformation
 from rrap_mds_is_registry_api.model.dataset_template_domain_info import DatasetTemplateDomainInfo
 
 

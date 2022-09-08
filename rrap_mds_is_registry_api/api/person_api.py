@@ -215,6 +215,7 @@ class PersonApi(object):
             },
             params_map={
                 'all': [
+                    'record_type',
                 ],
                 'required': [],
                 'nullable': [
@@ -230,10 +231,14 @@ class PersonApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
+                    'record_type':
+                        (bool, date, datetime, dict, float, int, list, str, none_type,),
                 },
                 'attribute_map': {
+                    'record_type': 'record_type',
                 },
                 'location_map': {
+                    'record_type': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -754,6 +759,7 @@ class PersonApi(object):
 
 
         Keyword Args:
+            record_type (bool, date, datetime, dict, float, int, list, str, none_type): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

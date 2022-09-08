@@ -81,9 +81,8 @@ class DatasetTemporalInformation(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'start_time': (datetime,),  # noqa: E501
-            'end_time': (datetime,),  # noqa: E501
-            'interval': (float,),  # noqa: E501
+            'start_time': (int,),  # noqa: E501
+            'end_time': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -94,7 +93,6 @@ class DatasetTemporalInformation(ModelNormal):
     attribute_map = {
         'start_time': 'start_time',  # noqa: E501
         'end_time': 'end_time',  # noqa: E501
-        'interval': 'interval',  # noqa: E501
     }
 
     read_only_vars = {
@@ -104,13 +102,12 @@ class DatasetTemporalInformation(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, start_time, end_time, interval, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, start_time, end_time, *args, **kwargs):  # noqa: E501
         """DatasetTemporalInformation - a model defined in OpenAPI
 
         Args:
-            start_time (datetime):
-            end_time (datetime):
-            interval (float):
+            start_time (int):
+            end_time (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -176,7 +173,6 @@ class DatasetTemporalInformation(ModelNormal):
 
         self.start_time = start_time
         self.end_time = end_time
-        self.interval = interval
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -197,13 +193,12 @@ class DatasetTemporalInformation(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, start_time, end_time, interval, *args, **kwargs):  # noqa: E501
+    def __init__(self, start_time, end_time, *args, **kwargs):  # noqa: E501
         """DatasetTemporalInformation - a model defined in OpenAPI
 
         Args:
-            start_time (datetime):
-            end_time (datetime):
-            interval (float):
+            start_time (int):
+            end_time (int):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -267,7 +262,6 @@ class DatasetTemporalInformation(ModelNormal):
 
         self.start_time = start_time
         self.end_time = end_time
-        self.interval = interval
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

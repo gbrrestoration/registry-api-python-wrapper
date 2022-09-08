@@ -368,6 +368,7 @@ class Item1(ModelComposed):
           'anyOf': [
               ItemModel,
               SeededItem,
+              none_type,
           ],
           'allOf': [
           ],

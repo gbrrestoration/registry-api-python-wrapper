@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**additional_description** | **str** |  | [optional] 
+**additional_description** | [**AdditionalDescription**](AdditionalDescription.md) |  | [optional] 
 **file_information** | [**[FileInformation]**](FileInformation.md) |  | [optional]  if omitted the server will use the default value of []
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

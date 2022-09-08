@@ -31,7 +31,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 def lazy_import():
     from rrap_mds_is_registry_api.model.status import Status
+    from rrap_mds_is_registry_api.model.ui_schema import UiSchema
     globals()['Status'] = Status
+    globals()['UiSchema'] = UiSchema
 
 
 class UiSchemaResponse(ModelNormal):
@@ -88,7 +90,7 @@ class UiSchemaResponse(ModelNormal):
         lazy_import()
         return {
             'status': (Status,),  # noqa: E501
-            'ui_schema': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'ui_schema': (UiSchema,),  # noqa: E501
         }
 
     @cached_property
@@ -145,7 +147,7 @@ class UiSchemaResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ui_schema ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            ui_schema (UiSchema): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -235,7 +237,7 @@ class UiSchemaResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            ui_schema ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            ui_schema (UiSchema): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

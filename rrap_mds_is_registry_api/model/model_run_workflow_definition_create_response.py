@@ -30,9 +30,9 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from rrap_mds_is_registry_api.model.item_model_run_workflow_definition import ItemModelRunWorkflowDefinition
+    from rrap_mds_is_registry_api.model.created_item3 import CreatedItem3
     from rrap_mds_is_registry_api.model.status import Status
-    globals()['ItemModelRunWorkflowDefinition'] = ItemModelRunWorkflowDefinition
+    globals()['CreatedItem3'] = CreatedItem3
     globals()['Status'] = Status
 
 
@@ -90,7 +90,7 @@ class ModelRunWorkflowDefinitionCreateResponse(ModelNormal):
         lazy_import()
         return {
             'status': (Status,),  # noqa: E501
-            'created_item': (ItemModelRunWorkflowDefinition,),  # noqa: E501
+            'created_item': (CreatedItem3,),  # noqa: E501
         }
 
     @cached_property
@@ -147,7 +147,7 @@ class ModelRunWorkflowDefinitionCreateResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_item (ItemModelRunWorkflowDefinition): [optional]  # noqa: E501
+            created_item (CreatedItem3): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -237,7 +237,7 @@ class ModelRunWorkflowDefinitionCreateResponse(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            created_item (ItemModelRunWorkflowDefinition): [optional]  # noqa: E501
+            created_item (CreatedItem3): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**structural_template** | [**DatasetStructuralTemplate**](DatasetStructuralTemplate.md) |  | [optional] 
-**spatial_information** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
-**temporal_information** | [**DatasetTemporalInformation**](DatasetTemporalInformation.md) |  | [optional] 
+**structural_template** | [**StructuralTemplate**](StructuralTemplate.md) |  | [optional] 
+**spatial_information** | [**SpatialInformation**](SpatialInformation.md) |  | [optional] 
+**temporal_information** | [**TemporalInformation**](TemporalInformation.md) |  | [optional] 
 **display_name** | **str** |  | [optional] 
 **usage_information** | [**DatasetUsageInformation**](DatasetUsageInformation.md) |  | [optional] 
 **id** | **str** |  | [optional] 

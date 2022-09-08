@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.orcid import Orcid
+globals()['Orcid'] = Orcid
 from rrap_mds_is_registry_api.model.person_domain_info import PersonDomainInfo
 
 

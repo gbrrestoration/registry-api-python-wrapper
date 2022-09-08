@@ -31,8 +31,10 @@ from rrap_mds_is_registry_api.exceptions import ApiAttributeError
 
 def lazy_import():
     from rrap_mds_is_registry_api.model.item2 import Item2
+    from rrap_mds_is_registry_api.model.item_is_seed import ItemIsSeed
     from rrap_mds_is_registry_api.model.status import Status
     globals()['Item2'] = Item2
+    globals()['ItemIsSeed'] = ItemIsSeed
     globals()['Status'] = Status
 
 
@@ -91,7 +93,7 @@ class ModelRunFetchResponse(ModelNormal):
         return {
             'status': (Status,),  # noqa: E501
             'item': (Item2,),  # noqa: E501
-            'item_is_seed': (bool,),  # noqa: E501
+            'item_is_seed': (ItemIsSeed,),  # noqa: E501
         }
 
     @cached_property
@@ -150,7 +152,7 @@ class ModelRunFetchResponse(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item (Item2): [optional]  # noqa: E501
-            item_is_seed (bool): [optional]  # noqa: E501
+            item_is_seed (ItemIsSeed): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -241,7 +243,7 @@ class ModelRunFetchResponse(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             item (Item2): [optional]  # noqa: E501
-            item_is_seed (bool): [optional]  # noqa: E501
+            item_is_seed (ItemIsSeed): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

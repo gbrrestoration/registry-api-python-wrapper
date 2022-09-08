@@ -12,11 +12,15 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
+from rrap_mds_is_registry_api.model.credentials import Credentials
 from rrap_mds_is_registry_api.model.data_store_dataset_resource import DataStoreDatasetResource
 from rrap_mds_is_registry_api.model.file_system_resource import FileSystemResource
+from rrap_mds_is_registry_api.model.filename_regex import FilenameRegex
 from rrap_mds_is_registry_api.model.url_dataset_resource import URLDatasetResource
+globals()['Credentials'] = Credentials
 globals()['DataStoreDatasetResource'] = DataStoreDatasetResource
 globals()['FileSystemResource'] = FileSystemResource
+globals()['FilenameRegex'] = FilenameRegex
 globals()['URLDatasetResource'] = URLDatasetResource
 from rrap_mds_is_registry_api.model.dataset import Dataset
 
