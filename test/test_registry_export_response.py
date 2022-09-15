@@ -12,17 +12,15 @@ import sys
 import unittest
 
 import rrap_mds_is_registry_api
-from rrap_mds_is_registry_api.model.items7 import Items7
+from rrap_mds_is_registry_api.model.items6 import Items6
 from rrap_mds_is_registry_api.model.status import Status
-from rrap_mds_is_registry_api.model.total_item_count import TotalItemCount
-globals()['Items7'] = Items7
+globals()['Items6'] = Items6
 globals()['Status'] = Status
-globals()['TotalItemCount'] = TotalItemCount
-from rrap_mds_is_registry_api.model.unparsed_list_response import UnparsedListResponse
+from rrap_mds_is_registry_api.model.registry_export_response import RegistryExportResponse
 
 
-class TestUnparsedListResponse(unittest.TestCase):
-    """UnparsedListResponse unit test stubs"""
+class TestRegistryExportResponse(unittest.TestCase):
+    """RegistryExportResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,10 +28,10 @@ class TestUnparsedListResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testUnparsedListResponse(self):
-        """Test UnparsedListResponse"""
+    def testRegistryExportResponse(self):
+        """Test RegistryExportResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = UnparsedListResponse()  # noqa: E501
+        # model = RegistryExportResponse()  # noqa: E501
         pass
 
 

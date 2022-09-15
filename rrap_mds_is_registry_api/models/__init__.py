@@ -39,11 +39,14 @@ from rrap_mds_is_registry_api.model.email import Email
 from rrap_mds_is_registry_api.model.enforce_constraints import EnforceConstraints
 from rrap_mds_is_registry_api.model.enforce_size_constraints import EnforceSizeConstraints
 from rrap_mds_is_registry_api.model.extension import Extension
+from rrap_mds_is_registry_api.model.failure_list import FailureList
 from rrap_mds_is_registry_api.model.file_information import FileInformation
 from rrap_mds_is_registry_api.model.file_system_resource import FileSystemResource
 from rrap_mds_is_registry_api.model.filename_regex import FilenameRegex
 from rrap_mds_is_registry_api.model.folder import Folder
 from rrap_mds_is_registry_api.model.http_validation_error import HTTPValidationError
+from rrap_mds_is_registry_api.model.import_mode import ImportMode
+from rrap_mds_is_registry_api.model.import_statistics import ImportStatistics
 from rrap_mds_is_registry_api.model.input_info import InputInfo
 from rrap_mds_is_registry_api.model.item import Item
 from rrap_mds_is_registry_api.model.item1 import Item1
@@ -68,6 +71,7 @@ from rrap_mds_is_registry_api.model.items3 import Items3
 from rrap_mds_is_registry_api.model.items4 import Items4
 from rrap_mds_is_registry_api.model.items5 import Items5
 from rrap_mds_is_registry_api.model.items6 import Items6
+from rrap_mds_is_registry_api.model.items7 import Items7
 from rrap_mds_is_registry_api.model.json_schema import JsonSchema
 from rrap_mds_is_registry_api.model.json_schema_response import JsonSchemaResponse
 from rrap_mds_is_registry_api.model.location_inner import LocationInner
@@ -110,6 +114,10 @@ from rrap_mds_is_registry_api.model.query_filter_item_category import QueryFilte
 from rrap_mds_is_registry_api.model.query_filter_item_subtype import QueryFilterItemSubtype
 from rrap_mds_is_registry_api.model.query_record_types import QueryRecordTypes
 from rrap_mds_is_registry_api.model.record_type import RecordType
+from rrap_mds_is_registry_api.model.registry_export_response import RegistryExportResponse
+from rrap_mds_is_registry_api.model.registry_import_request import RegistryImportRequest
+from rrap_mds_is_registry_api.model.registry_import_response import RegistryImportResponse
+from rrap_mds_is_registry_api.model.registry_restore_request import RegistryRestoreRequest
 from rrap_mds_is_registry_api.model.requesting_organisation import RequestingOrganisation
 from rrap_mds_is_registry_api.model.ror import Ror
 from rrap_mds_is_registry_api.model.seed_item_count import SeedItemCount
@@ -119,6 +127,7 @@ from rrap_mds_is_registry_api.model.size_estimate import SizeEstimate
 from rrap_mds_is_registry_api.model.size_max import SizeMax
 from rrap_mds_is_registry_api.model.size_min import SizeMin
 from rrap_mds_is_registry_api.model.spatial_information import SpatialInformation
+from rrap_mds_is_registry_api.model.statistics import Statistics
 from rrap_mds_is_registry_api.model.status import Status
 from rrap_mds_is_registry_api.model.status_response import StatusResponse
 from rrap_mds_is_registry_api.model.structural_template import StructuralTemplate

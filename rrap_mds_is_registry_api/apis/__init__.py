@@ -15,6 +15,7 @@
 
 # Import APIs into API package:
 from rrap_mds_is_registry_api.api.access_check_api import AccessCheckApi
+from rrap_mds_is_registry_api.api.admin_api import AdminApi
 from rrap_mds_is_registry_api.api.dataset_template_api import DatasetTemplateApi
 from rrap_mds_is_registry_api.api.general_registry_api import GeneralRegistryApi
 from rrap_mds_is_registry_api.api.model_api import ModelApi

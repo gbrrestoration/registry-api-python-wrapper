@@ -1,12 +1,14 @@
-# UnparsedListResponse
+# ImportStatistics
 
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**Status**](Status.md) |  | 
-**items** | [**Items7**](Items7.md) |  | [optional] 
-**total_item_count** | [**TotalItemCount**](TotalItemCount.md) |  | [optional] 
+**old_registry_size** | **int** |  | 
+**new_registry_size** | **int** |  | 
+**deleted_entries** | **int** |  | 
+**overwritten_entries** | **int** |  | 
+**new_entries** | **int** |  | 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
